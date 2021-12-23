@@ -1,30 +1,12 @@
 import { track, trigger } from "./effect";
-
+// 抽离 readonly 和 reactive get获取
+import { multipleHandlers, readonlyHandlers } from "./baseHandlers";
 export function reactive(raw) {
-  return new Proxy(raw, {
-    get(target, key) {
-      const res = Reflect.get(target, key);
-      // todo 依赖收集
-      track(target, key);
-      return res;
-    },
-    set(target, key, value) {
-      const res = Reflect.set(target, key, value);
-      trigger(target, key);
-      return res;
-    },
-  });
+  return createReactiveObject(raw, multipleHandlers);
 }
-
-// export function reactive(raw) {
-//   return new Proxy(raw, {
-//     get(target, key) {
-//       track(target, key);
-//       return Reflect.get(target, key);
-//     },
-//     set(target, key, value) {
-//       trigger(target, key);
-//       return Reflect.set(target, key, value);
-//     },
-//   });
-// }
+export function readonly(raw) {
+  return createReactiveObject(raw, readonlyHandlers);
+}
+function createReactiveObject(raw, handlers) {
+  return new Proxy(raw, handlers);
+}
