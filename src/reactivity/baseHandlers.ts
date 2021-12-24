@@ -1,8 +1,21 @@
 import { track, trigger } from "./effect";
-
-function createGetter(isReadonly = false) {
+import { reactive, readonly, rectiveFlags } from "./reactive";
+import { extend, isObject } from "../shared";
+function createGetter(isReadonly = false, shallow = false) {
   return function get(target, key) {
+    if (key === rectiveFlags.IS_REACTIVE) {
+      return !isReadonly;
+    } else if (key === rectiveFlags.IS_READONLY) {
+      return !!isReadonly;
+    }
     const res = Reflect.get(target, key);
+    if (shallow) {
+      return res;
+    }
+    // 通过判断res 是否为 reactive
+    if (isObject(res)) {
+      return isReadonly ? readonly(res) : reactive(res);
+    }
     if (!isReadonly) {
       track(target, key);
     }
@@ -13,6 +26,7 @@ function createGetter(isReadonly = false) {
 const get = createGetter();
 const set = createSetter();
 const readonlyGet = createGetter(true);
+const shallowReadonlyGet = createGetter(true, true);
 // 抽离 readonly 和 reactive set获取
 function createSetter() {
   return function set(target, key, value) {
@@ -34,3 +48,6 @@ export const readonlyHandlers = {
     return true;
   },
 };
+export const shallowHandlers = extend({}, readonlyHandlers, {
+  get: shallowReadonlyGet,
+});
