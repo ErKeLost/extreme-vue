@@ -13,7 +13,6 @@ export class ReactiveEffect {
   run() {
     // 这个时候收集依赖 但是因为 在 ++操作 会调用 get操作 还是会 收集依赖 所以我i们需要一个变量来判断
     if (!this.active) {
-      console.log(456465456445);
       return this._fn();
     }
 

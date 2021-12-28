@@ -62,7 +62,6 @@ describe("effect", () => {
     // expect(dummy).toBe(2);
     // expect(runner()).toBe(undefined);
     stop(runner);
-    // 2021.12.23 stop单元测试有bug
     obj.prop++; //  这块 有问题
     // obj.prop = 3;
     expect(dummy).toBe(2);
