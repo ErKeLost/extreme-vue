@@ -69,7 +69,7 @@ export default defineConfig({
 
     nav: [
       { text: 'Guide', link: '/guide/', activeMatch: '/guide/' },
-      { text: 'Config', link: '/config/', activeMatch: '/config/' },
+      { text: '@vue/reactivity', link: '/reactivity/', activeMatch: '/reactivity/' },
       { text: 'Plugins', link: '/plugins/', activeMatch: '/plugins/' },
       {
         text: 'Links',
@@ -192,13 +192,13 @@ export default defineConfig({
           ]
         }
       ],
-      '/config/': [
+      '/reactivity/': [
         {
-          text: 'Config',
+          text: '@vue/reactivity',
           items: [
             {
               text: 'Configuring Vite',
-              link: '/config/'
+              link: '/reactivity/'
             },
             {
               text: 'Shared Options',
