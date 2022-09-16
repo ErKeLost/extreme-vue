@@ -1,7 +1,7 @@
 import { defineConfig } from 'tsup'
 
 export default defineConfig({
-  entry: ['./src/reactivity/reactive.ts'],
+  entry: ['./src/index.ts'],
   target: 'esnext',
   format: ['esm', 'cjs', 'iife'],
   splitting: false,

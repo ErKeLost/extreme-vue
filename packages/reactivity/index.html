@@ -7,6 +7,13 @@
     <title>Document</title>
   </head>
   <body>
-    <script type="module"></script>
+    <script type="module">
+      import { effect, reactive } from "./dist/index.mjs";
+      const res = reactive({ foo: 1 });
+      effect(() => {
+        res.foo = 3;
+      });
+      console.log(res);
+    </script>
   </body>
 </html>
