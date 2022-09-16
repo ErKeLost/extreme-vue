@@ -197,16 +197,16 @@ export default defineConfig({
           text: '@vue/reactivity',
           items: [
             {
-              text: 'Configuring Vite',
+              text: '响应式解析',
               link: '/reactivity/'
             },
             {
-              text: 'Shared Options',
-              link: '/config/shared-options'
+              text: 'effect 返回 runner 函数',
+              link: '/reactivity/runner'
             },
             {
-              text: 'Server Options',
-              link: '/config/server-options'
+              text: 'effect 的 scheduler 功能',
+              link: '/reactivity/scheduler'
             },
             {
               text: 'Build Options',
