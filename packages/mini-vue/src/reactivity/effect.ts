@@ -5,14 +5,14 @@ export class ReactiveEffect {
   private _fn;
   deps = [];
   onStop?: () => void;
-  active = true;
+  stopActive = true;
   constructor(fn, public scheduler?) {
     this._fn = fn;
     this.scheduler = scheduler;
   }
   run() {
     // 这个时候收集依赖 但是因为 在 ++操作 会调用 get操作 还是会 收集依赖 所以我i们需要一个变量来判断
-    if (!this.active) {
+    if (!this.stopActive) {
       return this._fn();
     }
 
@@ -24,12 +24,12 @@ export class ReactiveEffect {
     return result;
   }
   stop() {
-    if (this.active) {
+    if (this.stopActive) {
       cleanupEffect(this);
       if (this.onStop) {
         this.onStop();
       }
-      this.active = false;
+      this.stopActive = false;
     }
   }
 }
@@ -56,7 +56,6 @@ export function track(target, key) {
     dep = new Set();
     depMap.set(key, dep);
   }
-
   trackEffects(dep);
 }
 export function isTacking() {

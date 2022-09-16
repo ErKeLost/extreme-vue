@@ -1,11 +1,11 @@
 import { track, trigger } from "./effect";
-import { reactive, readonly, rectiveFlags } from "./reactive";
+import { reactive, readonly, reactiveFlags } from "./reactive";
 import { extend, isObject } from "../shared";
 function createGetter(isReadonly = false, shallow = false) {
   return function get(target, key) {
-    if (key === rectiveFlags.IS_REACTIVE) {
+    if (key === reactiveFlags.IS_REACTIVE) {
       return !isReadonly;
-    } else if (key === rectiveFlags.IS_READONLY) {
+    } else if (key === reactiveFlags.IS_READONLY) {
       return !!isReadonly;
     }
     const res = Reflect.get(target, key);
@@ -36,6 +36,7 @@ function createSetter() {
   };
 }
 
+// reactive
 export const multipleHandlers = {
   get,
   set,

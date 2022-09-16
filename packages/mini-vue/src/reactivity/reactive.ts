@@ -1,4 +1,4 @@
-export const enum rectiveFlags {
+export const enum reactiveFlags {
   IS_REACTIVE = "_v_isReactive",
   IS_READONLY = "_v_isReadonly",
 }
@@ -20,10 +20,10 @@ export function shallowReadonly(raw) {
 }
 
 export function isReactive(raw) {
-  return !!raw[rectiveFlags.IS_REACTIVE];
+  return !!raw[reactiveFlags.IS_REACTIVE];
 }
 export function isReadonly(raw) {
-  return !!raw[rectiveFlags.IS_READONLY];
+  return !!raw[reactiveFlags.IS_READONLY];
 }
 
 export function isProxy(raw) {
