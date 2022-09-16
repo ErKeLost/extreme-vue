@@ -1,8 +1,8 @@
 {
-  "name": "reactivity",
+  "name": "@relaxed/reactivity",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.mjs",
   "scripts": {
     "build": "tsup",
     "test": "echo \"Error: no test specified\" && exit 1"

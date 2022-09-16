@@ -34,14 +34,22 @@ importers:
       vitepress: 1.0.0-alpha.14
       vue: 3.2.39
 
+  packages/mini-vue:
+    specifiers: {}
+
+  packages/reactivity:
+    specifiers: {}
+
   playground:
     specifiers:
+      '@relaxed/reactivity': workspace:*
       '@vitejs/plugin-vue': ^3.1.0
       typescript: ^4.6.4
       vite: ^3.1.0
       vue: ^3.2.37
       vue-tsc: ^0.40.4
     dependencies:
+      '@relaxed/reactivity': link:../packages/reactivity
       vue: 3.2.39
     devDependencies:
       '@vitejs/plugin-vue': 3.1.0_vite@3.1.0+vue@3.2.39

@@ -1,8 +1,9 @@
 <script setup lang="ts">
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import * as ww from "../../dist/reactivity/reactive";
-console.log(ww);
+import { effect, reactive } from "@relaxed/reactivity";
+console.log(effect);
+console.log(reactive);
 </script>
 
 <template>
