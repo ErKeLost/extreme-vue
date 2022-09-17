@@ -5,7 +5,7 @@
   "main": "dist/index.mjs",
   "scripts": {
     "test": "jest",
-    "build": "tsup --watch"
+    "dev": "tsup --watch"
   },
   "keywords": [],
   "author": "",
