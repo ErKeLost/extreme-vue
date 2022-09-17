@@ -117,7 +117,7 @@ export default defineConfig({
           text: 'Guide',
           items: [
             {
-              text: 'Why Vite',
+              text: '实现 effect & reactive',
               link: '/guide/why'
             },
             {

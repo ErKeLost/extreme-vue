@@ -21,9 +21,9 @@ export function track(target, key) {
     dep = new Set();
     depsMap.set(key, dep);
   }
-  console.log(activeEffect);
+  // console.log(activeEffect);
   dep.add(activeEffect);
-  console.log(dep);
+  console.log(targetMap);
 }
 
 export function trigger(target, key) {
@@ -31,7 +31,6 @@ export function trigger(target, key) {
   let depsMap = targetMap.get(target);
   let dep = depsMap.get(key);
   for (const effect of dep) {
-    console.log(effect);
     effect.run();
   }
 }

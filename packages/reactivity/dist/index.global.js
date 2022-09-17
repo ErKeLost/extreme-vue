@@ -23,15 +23,13 @@
       dep = /* @__PURE__ */ new Set();
       depsMap.set(key, dep);
     }
-    console.log(activeEffect);
     dep.add(activeEffect);
-    console.log(dep);
+    console.log(targetMap);
   }
   function trigger(target, key) {
     let depsMap = targetMap.get(target);
     let dep = depsMap.get(key);
     for (const effect2 of dep) {
-      console.log(effect2);
       effect2.run();
     }
   }
@@ -46,13 +44,11 @@
       get(target, key) {
         const res = Reflect.get(target, key);
         track(target, key);
-        console.log("\u89E6\u53D1get");
         return res;
       },
       set(target, key, value) {
         const res = Reflect.set(target, key, value);
         trigger(target, key);
-        console.log("\u89E6\u53D1set");
         return res;
       }
     });
