@@ -2,8 +2,14 @@
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
 import { effect, reactive } from "@relaxed/reactivity";
-console.log(effect);
-console.log(reactive);
+let dummy;
+const counter = reactive({ num: 0 });
+effect(() => (dummy = counter.num));
+
+console.log(dummy);
+
+counter.num = 7;
+console.log(dummy);
 </script>
 
 <template>

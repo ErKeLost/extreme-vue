@@ -11,6 +11,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@relaxed/shared": "workspace:*"
+    "@relaxed/shared": "wor"
   }
 }
