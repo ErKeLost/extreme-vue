@@ -69,7 +69,7 @@ export default defineConfig({
 
     nav: [
       { text: 'Guide', link: '/guide/', activeMatch: '/guide/' },
-      { text: '@vue/reactivity', link: '/reactivity/', activeMatch: '/reactivity/' },
+      { text: 'Config', link: '/config/', activeMatch: '/config/' },
       { text: 'Plugins', link: '/plugins/', activeMatch: '/plugins/' },
       {
         text: 'Links',
@@ -192,21 +192,21 @@ export default defineConfig({
           ]
         }
       ],
-      '/reactivity/': [
+      '/config/': [
         {
-          text: '@vue/reactivity',
+          text: 'Config',
           items: [
             {
-              text: '响应式解析',
-              link: '/reactivity/'
+              text: 'Configuring Vite',
+              link: '/config/'
             },
             {
-              text: 'effect 返回 runner 函数',
-              link: '/reactivity/runner'
+              text: 'Shared Options',
+              link: '/config/shared-options'
             },
             {
-              text: 'effect 的 scheduler 功能',
-              link: '/reactivity/scheduler'
+              text: 'Server Options',
+              link: '/config/server-options'
             },
             {
               text: 'Build Options',

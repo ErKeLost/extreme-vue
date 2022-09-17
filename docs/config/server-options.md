@@ -193,7 +193,7 @@ export default defineConfig({
 
 Create Vite server in middleware mode.
 
-- **Related:** [appType](@relaxed/shared-options#apptype), [SSR - Setting Up the Dev Server](/guide/ssr#setting-up-the-dev-server)
+- **Related:** [appType](./shared-options#apptype), [SSR - Setting Up the Dev Server](/guide/ssr#setting-up-the-dev-server)
 
 - **Example:**
 
