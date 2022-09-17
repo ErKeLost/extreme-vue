@@ -4,23 +4,17 @@
 import { effect, reactive } from "@relaxed/reactivity";
 let dummy;
 const counter = reactive({ num: 0 });
-counter.num = 2
-console.log(counter.num);
 
-// effect(() => (dummy = counter.num));
-// console.log(dummy);
-// counter.num = 7;
-// console.log(dummy);
+effect(() => (dummy = counter.num + 5));
+console.log(dummy);
+counter.num = 7;
+console.log(dummy);
 </script>
 
 <template>
   <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
+    <img src="/vite.svg" class="logo" alt="Vite logo" />
+    <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
   </div>
 </template>
 
