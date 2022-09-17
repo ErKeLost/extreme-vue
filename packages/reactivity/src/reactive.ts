@@ -6,12 +6,14 @@ export function reactive(raw) {
       const res = Reflect.get(target, key);
       // track
       track(target, key);
+      console.log("触发get");
       return res;
     },
     set(target, key, value) {
       const res = Reflect.set(target, key, value);
       // trigger
       trigger(target, key);
+      console.log("触发set");
       return res;
     },
   });

@@ -1,18 +1,11 @@
 let activeEffect;
 export class ReactiveEffect {
-  public _fn;
-  constructor(fn) {
-    this._fn = fn;
+  constructor(public fn) {
   }
   run() {
-    this._fn();
     activeEffect = this;
+    this.fn();
   }
-}
-
-export function effect(fn) {
-  const _effect = new ReactiveEffect(fn);
-  _effect.run();
 }
 
 const targetMap = new Map();
@@ -28,9 +21,9 @@ export function track(target, key) {
     dep = new Set();
     depsMap.set(key, dep);
   }
+  console.log(activeEffect);
   dep.add(activeEffect);
-  // const dep = depsMap.get(key)
-  // const dep = new Set()
+  console.log(dep);
 }
 
 export function trigger(target, key) {
@@ -38,8 +31,14 @@ export function trigger(target, key) {
   let depsMap = targetMap.get(target);
   let dep = depsMap.get(key);
   for (const effect of dep) {
-    effect._fn();
+    console.log(effect);
+    effect.run();
   }
+}
+
+export function effect(fn) {
+  const _effect = new ReactiveEffect(fn);
+  _effect.run();
 }
 
 // import { createDep } from "./dep";
