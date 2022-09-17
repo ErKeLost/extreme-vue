@@ -1,5 +1,5 @@
 import { createDep } from "./dep";
-import { extend } from "./shared";
+import { extend } from "@relaxed/shared";
 
 let activeEffect = void 0;
 let shouldTrack = false;

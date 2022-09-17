@@ -9,9 +9,9 @@ Output format for worker bundle.
 
 ## worker.plugins
 
-- **Type:** [`(Plugin | Plugin[])[]`](./shared-options#plugins)
+- **Type:** [`(Plugin | Plugin[])[]`](@relaxed/shared-options#plugins)
 
-Vite plugins that apply to worker bundle. Note that [config.plugins](./shared-options#plugins) does not apply to workers, it should be configured here instead.
+Vite plugins that apply to worker bundle. Note that [config.plugins](@relaxed/shared-options#plugins) does not apply to workers, it should be configured here instead.
 
 ## worker.rollupOptions
 

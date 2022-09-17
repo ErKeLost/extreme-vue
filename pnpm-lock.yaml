@@ -38,6 +38,12 @@ importers:
     specifiers: {}
 
   packages/reactivity:
+    specifiers:
+      '@relaxed/shared': workspace:*
+    dependencies:
+      '@relaxed/shared': link:../shared
+
+  packages/shared:
     specifiers: {}
 
   playground:

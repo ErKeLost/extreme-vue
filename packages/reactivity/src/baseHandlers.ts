@@ -7,7 +7,7 @@ import {
   readonlyMap,
   shallowReadonlyMap,
 } from "./reactive";
-import { isObject } from "./shared";
+import { isObject } from "@relaxed/shared";
 
 const get = createGetter();
 const set = createSetter();

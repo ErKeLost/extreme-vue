@@ -1,4 +1,4 @@
-import { extend } from "../shared";
+import { extend } from ".@relaxed/shared";
 let activeEffect;
 let shouldTrack;
 export class ReactiveEffect {

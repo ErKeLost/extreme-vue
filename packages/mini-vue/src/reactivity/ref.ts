@@ -1,4 +1,4 @@
-import { hasChange, isObject } from "../shared";
+import { hasChange, isObject } from ".@relaxed/shared";
 import { isTacking, trackEffects, triggerEffects } from "./effect";
 import { reactive } from "./reactive";
 // ref 为了监听数据的收集依赖 和 触发依赖 所以 需要 我们可以使用类的访问器属性包装成一个对象 以.value的形式 作用于proxy

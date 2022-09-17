@@ -1,6 +1,6 @@
 import { track, trigger } from "./effect";
 import { reactive, readonly, reactiveFlags } from "./reactive";
-import { extend, isObject } from "../shared";
+import { extend, isObject } from ".@relaxed/shared";
 function createGetter(isReadonly = false, shallow = false) {
   return function get(target, key) {
     if (key === reactiveFlags.IS_REACTIVE) {
