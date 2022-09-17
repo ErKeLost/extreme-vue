@@ -1,0 +1,15 @@
+{
+  "name": "@relaxed/runtime-core",
+  "version": "1.0.0",
+  "description": "@relaxed/runtime-core",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@relaxed/reactivity": "workspace:^1.0.0",
+    "@relaxed/shared": "workspace:^1.0.0"
+  }
+}

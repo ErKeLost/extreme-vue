@@ -4,12 +4,13 @@
 import { effect, reactive } from "@relaxed/reactivity";
 let dummy;
 const counter = reactive({ num: 0 });
-effect(() => (dummy = counter.num));
+counter.num = 2
+console.log(counter.num);
 
-console.log(dummy);
-
-counter.num = 7;
-console.log(dummy);
+// effect(() => (dummy = counter.num));
+// console.log(dummy);
+// counter.num = 7;
+// console.log(dummy);
 </script>
 
 <template>
