@@ -6,7 +6,8 @@
     "dev": "turbo run dev --filter=playground --filter=@relaxed/reactivity",
     "build": "turbo run dev --filter=@relaxed/reactivity",
     "docs": "vitepress dev docs",
-    "test": "jest --no-cache"
+    "test": "jest --no-cache",
+    "build:docs": "vitepress build docs"
   },
   "devDependencies": {
     "@types/jest": "^26.0.24",
