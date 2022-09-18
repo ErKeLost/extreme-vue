@@ -19,6 +19,20 @@ export function reactive(raw) {
   });
 }
 
+export function readonly(raw) {
+  return new Proxy(raw, {
+    get(target, key) {
+      const res = Reflect.get(target, key);
+      // track
+      // console.log("触发get");
+      return res;
+    },
+    set(target, key, value) {
+      return true
+    },
+  });
+}
+
 // import {
 //   mutableHandlers,
 //   readonlyHandlers,

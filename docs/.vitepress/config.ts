@@ -133,11 +133,11 @@ export default defineConfig({
               link: '/guide/using-plugins'
             },
             {
-              text: 'Dependency Pre-Bundling',
+              text: '优化 Effect 代码 onStop 功能',
               link: '/guide/dep-pre-bundling'
             },
             {
-              text: 'Static Asset Handling',
+              text: 'readonly',
               link: '/guide/assets'
             },
             {

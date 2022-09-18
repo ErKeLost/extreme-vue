@@ -1,4 +1,5 @@
 // src/effect.ts
+import { extend } from "@relaxed/shared";
 var activeEffect;
 var ReactiveEffect = class {
   constructor(fn, scheduler) {
@@ -6,16 +7,27 @@ var ReactiveEffect = class {
     this.scheduler = scheduler;
   }
   deps = [];
+  activeStop = true;
+  onStop;
   run() {
     activeEffect = this;
     return this.fn();
   }
   stop() {
-    this.deps.forEach((dep) => {
-      dep.delete(this);
-    });
+    if (this.activeStop) {
+      cleanupEffect(this);
+      if (this.onStop) {
+        this.onStop();
+      }
+      this.activeStop = false;
+    }
   }
 };
+function cleanupEffect(effect2) {
+  effect2.deps.forEach((dep) => {
+    dep.delete(effect2);
+  });
+}
 var targetMap = /* @__PURE__ */ new Map();
 function track(target, key) {
   let depsMap = targetMap.get(target);
@@ -28,6 +40,8 @@ function track(target, key) {
     dep = /* @__PURE__ */ new Set();
     depsMap.set(key, dep);
   }
+  if (!activeEffect)
+    return;
   dep.add(activeEffect);
   activeEffect.deps.push(dep);
 }
@@ -43,8 +57,9 @@ function trigger(target, key) {
   }
 }
 function effect(fn, options = {}) {
-  const scheduler = options.scheduler;
-  const _effect = new ReactiveEffect(fn, scheduler);
+  const _effect = new ReactiveEffect(fn, options.scheduler);
+  extend(_effect, options);
+  console.log(_effect);
   _effect.run();
   const runner = _effect.run.bind(_effect);
   runner.effect = _effect;
