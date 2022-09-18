@@ -1,10 +1,15 @@
 let activeEffect;
 export class ReactiveEffect {
-  constructor(public fn) {
-  }
+  deps = [];
+  constructor(public fn, public scheduler?) {}
   run() {
     activeEffect = this;
-    this.fn();
+    return this.fn();
+  }
+  stop() {
+    this.deps.forEach((dep: any) => {
+      dep.delete(this);
+    });
   }
 }
 
@@ -23,7 +28,7 @@ export function track(target, key) {
   }
   // console.log(activeEffect);
   dep.add(activeEffect);
-  console.log(targetMap);
+  activeEffect.deps.push(dep);
 }
 
 export function trigger(target, key) {
@@ -31,13 +36,25 @@ export function trigger(target, key) {
   let depsMap = targetMap.get(target);
   let dep = depsMap.get(key);
   for (const effect of dep) {
-    effect.run();
+    if (effect.scheduler) {
+      effect.scheduler();
+    } else {
+      effect.run();
+    }
   }
 }
 
-export function effect(fn) {
-  const _effect = new ReactiveEffect(fn);
+export function effect(fn, options: any = {}) {
+  const scheduler = options.scheduler;
+  const _effect = new ReactiveEffect(fn, scheduler);
   _effect.run();
+  const runner: any = _effect.run.bind(_effect);
+  runner.effect = _effect;
+  return runner;
+}
+
+export function stop(runner) {
+  runner.effect.stop();
 }
 
 // import { createDep } from "./dep";

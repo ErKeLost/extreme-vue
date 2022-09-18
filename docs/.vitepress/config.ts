@@ -121,15 +121,15 @@ export default defineConfig({
               link: '/guide/why'
             },
             {
-              text: 'Getting Started',
+              text: 'effect 返回 runner',
               link: '/guide/'
             },
             {
-              text: 'Features',
+              text: 'effect 的 scheduler',
               link: '/guide/features'
             },
             {
-              text: 'Using Plugins',
+              text: 'effect 的 stop 功能',
               link: '/guide/using-plugins'
             },
             {

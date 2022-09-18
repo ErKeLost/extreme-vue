@@ -3,12 +3,19 @@
   // src/effect.ts
   var activeEffect;
   var ReactiveEffect = class {
-    constructor(fn) {
+    constructor(fn, scheduler) {
       this.fn = fn;
+      this.scheduler = scheduler;
     }
+    deps = [];
     run() {
       activeEffect = this;
-      this.fn();
+      return this.fn();
+    }
+    stop() {
+      this.deps.forEach((dep) => {
+        dep.delete(this);
+      });
     }
   };
   var targetMap = /* @__PURE__ */ new Map();
@@ -24,18 +31,26 @@
       depsMap.set(key, dep);
     }
     dep.add(activeEffect);
-    console.log(targetMap);
+    activeEffect.deps.push(dep);
   }
   function trigger(target, key) {
     let depsMap = targetMap.get(target);
     let dep = depsMap.get(key);
     for (const effect2 of dep) {
-      effect2.run();
+      if (effect2.scheduler) {
+        effect2.scheduler();
+      } else {
+        effect2.run();
+      }
     }
   }
-  function effect(fn) {
-    const _effect = new ReactiveEffect(fn);
+  function effect(fn, options = {}) {
+    const scheduler = options.scheduler;
+    const _effect = new ReactiveEffect(fn, scheduler);
     _effect.run();
+    const runner = _effect.run.bind(_effect);
+    runner.effect = _effect;
+    return runner;
   }
 
   // src/reactive.ts
