@@ -56,6 +56,8 @@
       dep = /* @__PURE__ */ new Set();
       depsMap.set(key, dep);
     }
+    if (dep.has(activeEffect))
+      return;
     dep.add(activeEffect);
     activeEffect.deps.push(dep);
   }
