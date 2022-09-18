@@ -1,4 +1,10 @@
 import { mutableHandlers, readonlyHandlers } from "./baseHandlers";
+
+// 是一个reactive
+export const enum ReactiveFlags {
+  IS_REACTIVE = "_v_isReactive",
+  IS_READONLY = "_v_isReadonly",
+}
 // true  false 判断是否是 readonly
 export function reactive(raw) {
   return createActiveObject(raw, mutableHandlers);
@@ -6,6 +12,14 @@ export function reactive(raw) {
 
 export function readonly(raw) {
   return createActiveObject(raw, readonlyHandlers);
+}
+
+export function isReactive(raw) {
+  // 如果是原始对象没有 proxy 代理 是undefined 转成 boolean
+  return !!raw[ReactiveFlags.IS_REACTIVE];
+}
+export function isReadonly(raw) {
+  return !!raw[ReactiveFlags.IS_READONLY];
 }
 
 function createActiveObject(raw, Handlers) {

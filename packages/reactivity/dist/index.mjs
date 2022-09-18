@@ -73,6 +73,11 @@ var readonlyGet = createGetter(true);
 function createGetter(isReadonly = false) {
   return function get2(target, key) {
     const res = Reflect.get(target, key);
+    if (key === "_v_isReactive" /* IS_REACTIVE */) {
+      return !isReadonly;
+    } else if (key === "_v_isReadonly" /* IS_READONLY */) {
+      return isReadonly;
+    }
     if (!isReadonly) {
       track(target, key);
     }

@@ -141,7 +141,7 @@ export default defineConfig({
               link: "/guide/assets",
             },
             {
-              text: "Building for Production",
+              text: "实现 isReactive 和 isReadonly",
               link: "/guide/build",
             },
             {
