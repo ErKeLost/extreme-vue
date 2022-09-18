@@ -145,7 +145,7 @@ export default defineConfig({
               link: "/guide/build",
             },
             {
-              text: "Deploying a Static Site",
+              text: "stop 优化",
               link: "/guide/static-deploy",
             },
             {

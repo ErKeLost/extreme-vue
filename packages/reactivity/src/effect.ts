@@ -1,6 +1,7 @@
 import { extend } from "@relaxed/shared";
 
 let activeEffect;
+let shouldTrack;
 export class ReactiveEffect {
   deps = [];
   activeStop = true;
@@ -8,8 +9,15 @@ export class ReactiveEffect {
   onStop?: () => void;
   constructor(public fn, public scheduler?) {}
   run() {
+    // 1. 会收集依赖
+    if (!this.activeStop) {
+      return this.fn();
+    }
+    shouldTrack = true;
     activeEffect = this;
-    return this.fn();
+    const res = this.fn();
+    shouldTrack = false;
+    return res;
   }
   stop() {
     if (this.activeStop) {
@@ -25,9 +33,14 @@ function cleanupEffect(effect) {
   effect.deps.forEach((dep: any) => {
     dep.delete(effect);
   });
+  effect.deps.length = 0;
 }
 const targetMap = new Map();
 export function track(target, key) {
+  // 一开始没有 activeEffect
+  if (!activeEffect) return;
+  // 防止 同时触发 get 和 set 操作 他还是会收集到依赖 stop 会失效
+  if (!shouldTrack) return;
   // target -> key -> dep
   let depsMap = targetMap.get(target);
   if (!depsMap) {
@@ -39,9 +52,6 @@ export function track(target, key) {
     dep = new Set();
     depsMap.set(key, dep);
   }
-  if (!activeEffect) return;
-  // 一开始没有 activeEffect
-  // console.log(activeEffect);
   dep.add(activeEffect);
   activeEffect.deps.push(dep);
 }

@@ -5,6 +5,7 @@
 
   // src/effect.ts
   var activeEffect;
+  var shouldTrack;
   var ReactiveEffect = class {
     constructor(fn, scheduler) {
       this.fn = fn;
@@ -14,8 +15,14 @@
     activeStop = true;
     onStop;
     run() {
+      if (!this.activeStop) {
+        return this.fn();
+      }
+      shouldTrack = true;
       activeEffect = this;
-      return this.fn();
+      const res = this.fn();
+      shouldTrack = false;
+      return res;
     }
     stop() {
       if (this.activeStop) {
@@ -31,9 +38,14 @@
     effect2.deps.forEach((dep) => {
       dep.delete(effect2);
     });
+    effect2.deps.length = 0;
   }
   var targetMap = /* @__PURE__ */ new Map();
   function track(target, key) {
+    if (!activeEffect)
+      return;
+    if (!shouldTrack)
+      return;
     let depsMap = targetMap.get(target);
     if (!depsMap) {
       depsMap = /* @__PURE__ */ new Map();
@@ -44,8 +56,6 @@
       dep = /* @__PURE__ */ new Set();
       depsMap.set(key, dep);
     }
-    if (!activeEffect)
-      return;
     dep.add(activeEffect);
     activeEffect.deps.push(dep);
   }
