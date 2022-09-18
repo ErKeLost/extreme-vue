@@ -1,236 +1,236 @@
-import { defineConfig } from 'vitepress'
+import { defineConfig } from "vitepress";
 
-const ogDescription = 'Next Generation Frontend Tooling'
-const ogImage = 'https://main.vitejs.dev/og-image.png'
-const ogTitle = 'Vite'
-const ogUrl = 'https://main.vitejs.dev'
+const ogDescription = "Next Generation Frontend Tooling";
+const ogImage = "https://main.vitejs.dev/og-image.png";
+const ogTitle = "Vite";
+const ogUrl = "https://main.vitejs.dev";
 
 export default defineConfig({
-  title: 'Vite',
-  description: 'Next Generation Frontend Tooling',
+  title: "Vite",
+  description: "Next Generation Frontend Tooling",
 
   head: [
-    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/logo.svg' }],
-    ['meta', { property: 'og:type', content: 'website' }],
-    ['meta', { property: 'og:title', content: ogTitle }],
-    ['meta', { property: 'og:image', content: ogImage }],
-    ['meta', { property: 'og:url', content: ogUrl }],
-    ['meta', { property: 'twitter:description', content: ogDescription }],
-    ['meta', { property: 'twitter:title', content: ogTitle }],
-    ['meta', { property: 'twitter:card', content: 'summary_large_image' }],
-    ['meta', { property: 'twitter:image', content: ogImage }],
-    ['meta', { property: 'twitter:url', content: ogUrl }]
+    ["link", { rel: "icon", type: "image/svg+xml", href: "/logo.svg" }],
+    ["meta", { property: "og:type", content: "website" }],
+    ["meta", { property: "og:title", content: ogTitle }],
+    ["meta", { property: "og:image", content: ogImage }],
+    ["meta", { property: "og:url", content: ogUrl }],
+    ["meta", { property: "twitter:description", content: ogDescription }],
+    ["meta", { property: "twitter:title", content: ogTitle }],
+    ["meta", { property: "twitter:card", content: "summary_large_image" }],
+    ["meta", { property: "twitter:image", content: ogImage }],
+    ["meta", { property: "twitter:url", content: ogUrl }],
   ],
 
   vue: {
-    reactivityTransform: true
+    reactivityTransform: true,
   },
 
   themeConfig: {
-    logo: '/logo.svg',
+    logo: "/logo.svg",
 
     editLink: {
-      pattern: 'https://github.com/vitejs/vite/edit/main/docs/:path',
-      text: 'Suggest changes to this page'
+      pattern: "https://github.com/vitejs/vite/edit/main/docs/:path",
+      text: "Suggest changes to this page",
     },
 
     socialLinks: [
-      { icon: 'twitter', link: 'https://twitter.com/vite_js' },
-      { icon: 'discord', link: 'https://chat.vitejs.dev' },
-      { icon: 'github', link: 'https://github.com/vitejs/vite' }
+      { icon: "twitter", link: "https://twitter.com/vite_js" },
+      { icon: "discord", link: "https://chat.vitejs.dev" },
+      { icon: "github", link: "https://github.com/vitejs/vite" },
     ],
 
     algolia: {
-      apiKey: 'b573aa848fd57fb47d693b531297403c',
-      indexName: 'vitejs',
+      apiKey: "b573aa848fd57fb47d693b531297403c",
+      indexName: "vitejs",
       searchParameters: {
-        facetFilters: ['tags:en']
-      }
+        facetFilters: ["tags:en"],
+      },
     },
 
     carbonAds: {
-      code: 'CEBIEK3N',
-      placement: 'vitejsdev'
+      code: "CEBIEK3N",
+      placement: "vitejsdev",
     },
 
     localeLinks: {
-      text: 'English',
+      text: "English",
       items: [
-        { text: '简体中文', link: 'https://cn.vitejs.dev' },
-        { text: '日本語', link: 'https://ja.vitejs.dev' },
-        { text: 'Español', link: 'https://es.vitejs.dev' }
-      ]
+        { text: "简体中文", link: "https://cn.vitejs.dev" },
+        { text: "日本語", link: "https://ja.vitejs.dev" },
+        { text: "Español", link: "https://es.vitejs.dev" },
+      ],
     },
 
     footer: {
-      message: 'Released under the MIT License.',
-      copyright: 'Copyright © 2019-present Evan You & Vite Contributors'
+      message: "Released under the MIT License.",
+      copyright: "Copyright © 2019-present Evan You & Vite Contributors",
     },
 
     nav: [
-      { text: 'Guide', link: '/guide/', activeMatch: '/guide/' },
-      { text: 'Config', link: '/config/', activeMatch: '/config/' },
-      { text: 'Plugins', link: '/plugins/', activeMatch: '/plugins/' },
+      { text: "Guide", link: "/guide/", activeMatch: "/guide/" },
+      { text: "Config", link: "/config/", activeMatch: "/config/" },
+      { text: "Plugins", link: "/plugins/", activeMatch: "/plugins/" },
       {
-        text: 'Links',
+        text: "Links",
         items: [
           {
-            text: 'Twitter',
-            link: 'https://twitter.com/vite_js'
+            text: "Twitter",
+            link: "https://twitter.com/vite_js",
           },
           {
-            text: 'Discord Chat',
-            link: 'https://chat.vitejs.dev'
+            text: "Discord Chat",
+            link: "https://chat.vitejs.dev",
           },
           {
-            text: 'Awesome Vite',
-            link: 'https://github.com/vitejs/awesome-vite'
+            text: "Awesome Vite",
+            link: "https://github.com/vitejs/awesome-vite",
           },
           {
-            text: 'DEV Community',
-            link: 'https://dev.to/t/vite'
+            text: "DEV Community",
+            link: "https://dev.to/t/vite",
           },
           {
-            text: 'Rollup Plugins Compat',
-            link: 'https://vite-rollup-plugins.patak.dev/'
+            text: "Rollup Plugins Compat",
+            link: "https://vite-rollup-plugins.patak.dev/",
           },
           {
-            text: 'Changelog',
-            link: 'https://github.com/vitejs/vite/blob/main/packages/vite/CHANGELOG.md'
-          }
-        ]
+            text: "Changelog",
+            link: "https://github.com/vitejs/vite/blob/main/packages/vite/CHANGELOG.md",
+          },
+        ],
       },
       {
-        text: 'v3 (next)',
+        text: "v3 (next)",
         items: [
           {
-            text: 'v2.x (stable)',
-            link: 'https://v2.vitejs.dev'
-          }
-        ]
-      }
+            text: "v2.x (stable)",
+            link: "https://v2.vitejs.dev",
+          },
+        ],
+      },
     ],
 
     sidebar: {
-      '/guide/': [
+      "/guide/": [
         {
-          text: 'Guide',
+          text: "Guide",
           items: [
             {
-              text: '实现 effect & reactive',
-              link: '/guide/why'
+              text: "实现 effect & reactive",
+              link: "/guide/why",
             },
             {
-              text: 'effect 返回 runner',
-              link: '/guide/'
+              text: "effect 返回 runner",
+              link: "/guide/",
             },
             {
-              text: 'effect 的 scheduler',
-              link: '/guide/features'
+              text: "effect 的 scheduler",
+              link: "/guide/features",
             },
             {
-              text: 'effect 的 stop 功能',
-              link: '/guide/using-plugins'
+              text: "effect 的 stop 功能",
+              link: "/guide/using-plugins",
             },
             {
-              text: '优化 Effect 代码 onStop 功能',
-              link: '/guide/dep-pre-bundling'
+              text: "优化 Effect 代码 onStop 功能",
+              link: "/guide/dep-pre-bundling",
             },
             {
-              text: 'readonly',
-              link: '/guide/assets'
+              text: "readonly 优化代码",
+              link: "/guide/assets",
             },
             {
-              text: 'Building for Production',
-              link: '/guide/build'
+              text: "Building for Production",
+              link: "/guide/build",
             },
             {
-              text: 'Deploying a Static Site',
-              link: '/guide/static-deploy'
+              text: "Deploying a Static Site",
+              link: "/guide/static-deploy",
             },
             {
-              text: 'Env Variables and Modes',
-              link: '/guide/env-and-mode'
+              text: "Env Variables and Modes",
+              link: "/guide/env-and-mode",
             },
             {
-              text: 'Server-Side Rendering (SSR)',
-              link: '/guide/ssr'
+              text: "Server-Side Rendering (SSR)",
+              link: "/guide/ssr",
             },
             {
-              text: 'Backend Integration',
-              link: '/guide/backend-integration'
+              text: "Backend Integration",
+              link: "/guide/backend-integration",
             },
             {
-              text: 'Comparisons',
-              link: '/guide/comparisons'
+              text: "Comparisons",
+              link: "/guide/comparisons",
             },
             {
-              text: 'Migration from v2',
-              link: '/guide/migration'
-            }
-          ]
+              text: "Migration from v2",
+              link: "/guide/migration",
+            },
+          ],
         },
         {
-          text: 'APIs',
+          text: "APIs",
           items: [
             {
-              text: 'Plugin API',
-              link: '/guide/api-plugin'
+              text: "Plugin API",
+              link: "/guide/api-plugin",
             },
             {
-              text: 'HMR API',
-              link: '/guide/api-hmr'
+              text: "HMR API",
+              link: "/guide/api-hmr",
             },
             {
-              text: 'JavaScript API',
-              link: '/guide/api-javascript'
+              text: "JavaScript API",
+              link: "/guide/api-javascript",
             },
             {
-              text: 'Config Reference',
-              link: '/config/'
-            }
-          ]
-        }
+              text: "Config Reference",
+              link: "/config/",
+            },
+          ],
+        },
       ],
-      '/config/': [
+      "/config/": [
         {
-          text: 'Config',
+          text: "Config",
           items: [
             {
-              text: 'Configuring Vite',
-              link: '/config/'
+              text: "Configuring Vite",
+              link: "/config/",
             },
             {
-              text: 'Shared Options',
-              link: '/config/shared-options'
+              text: "Shared Options",
+              link: "/config/shared-options",
             },
             {
-              text: 'Server Options',
-              link: '/config/server-options'
+              text: "Server Options",
+              link: "/config/server-options",
             },
             {
-              text: 'Build Options',
-              link: '/config/build-options'
+              text: "Build Options",
+              link: "/config/build-options",
             },
             {
-              text: 'Preview Options',
-              link: '/config/preview-options'
+              text: "Preview Options",
+              link: "/config/preview-options",
             },
             {
-              text: 'Dep Optimization Options',
-              link: '/config/dep-optimization-options'
+              text: "Dep Optimization Options",
+              link: "/config/dep-optimization-options",
             },
             {
-              text: 'SSR Options',
-              link: '/config/ssr-options'
+              text: "SSR Options",
+              link: "/config/ssr-options",
             },
             {
-              text: 'Worker Options',
-              link: '/config/worker-options'
-            }
-          ]
-        }
-      ]
-    }
-  }
-})
+              text: "Worker Options",
+              link: "/config/worker-options",
+            },
+          ],
+        },
+      ],
+    },
+  },
+});

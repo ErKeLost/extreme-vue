@@ -1,6 +1,6 @@
 export {
   reactive,
-  // readonly,
+  readonly,
   // shallowReadonly,
   // isReadonly,
   // isReactive,

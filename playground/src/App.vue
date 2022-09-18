@@ -1,20 +1,10 @@
 <script setup lang="ts">
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import { effect, reactive } from "@relaxed/reactivity";
-let res = 666;
-const runner = effect(() => {
-  res++;
-  return 99999;
-});
+import { effect, reactive, readonly } from "@relaxed/reactivity";
+const res = readonly({ foo: 66 });
 console.log(res);
-const w = runner();
-console.log(w);
-console.log(res);
-
-// console.log(dummy);
-// counter.num = 9;
-// console.log(dummy);
+res.foo = 55
 </script>
 
 <template>

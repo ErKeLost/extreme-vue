@@ -66,23 +66,51 @@ function effect(fn, options = {}) {
   return runner;
 }
 
+// src/baseHandlers.ts
+var get = createGetter();
+var set = createSetter();
+var readonlyGet = createGetter(true);
+function createGetter(isReadonly = false) {
+  return function get2(target, key) {
+    const res = Reflect.get(target, key);
+    if (!isReadonly) {
+      track(target, key);
+    }
+    return res;
+  };
+}
+function createSetter() {
+  return function set2(target, key, value) {
+    const res = Reflect.set(target, key, value);
+    trigger(target, key);
+    return res;
+  };
+}
+var mutableHandlers = {
+  get,
+  set
+};
+var readonlyHandlers = {
+  get: readonlyGet,
+  set(target, key, value) {
+    console.warn(`${key} is not change ${target} is read-only`);
+    return true;
+  }
+};
+
 // src/reactive.ts
 function reactive(raw) {
-  return new Proxy(raw, {
-    get(target, key) {
-      const res = Reflect.get(target, key);
-      track(target, key);
-      return res;
-    },
-    set(target, key, value) {
-      const res = Reflect.set(target, key, value);
-      trigger(target, key);
-      return res;
-    }
-  });
+  return createActiveObject(raw, mutableHandlers);
+}
+function readonly(raw) {
+  return createActiveObject(raw, readonlyHandlers);
+}
+function createActiveObject(raw, Handlers) {
+  return new Proxy(raw, Handlers);
 }
 export {
   effect,
-  reactive
+  reactive,
+  readonly
 };
 //# sourceMappingURL=index.mjs.map

@@ -1,36 +1,15 @@
-import { track, trigger } from "./effect";
-
+import { mutableHandlers, readonlyHandlers } from "./baseHandlers";
+// true  false 判断是否是 readonly
 export function reactive(raw) {
-  return new Proxy(raw, {
-    get(target, key) {
-      const res = Reflect.get(target, key);
-      // track
-      track(target, key);
-      // console.log("触发get");
-      return res;
-    },
-    set(target, key, value) {
-      const res = Reflect.set(target, key, value);
-      // trigger
-      trigger(target, key);
-      // console.log("触发set");
-      return res;
-    },
-  });
+  return createActiveObject(raw, mutableHandlers);
 }
 
 export function readonly(raw) {
-  return new Proxy(raw, {
-    get(target, key) {
-      const res = Reflect.get(target, key);
-      // track
-      // console.log("触发get");
-      return res;
-    },
-    set(target, key, value) {
-      return true
-    },
-  });
+  return createActiveObject(raw, readonlyHandlers);
+}
+
+function createActiveObject(raw, Handlers) {
+  return new Proxy(raw, Handlers);
 }
 
 // import {
