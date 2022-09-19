@@ -165,8 +165,12 @@ export default defineConfig({
               link: "/guide/comparisons",
             },
             {
-              text: "Migration from v2",
+              text: "实现 isRef 和 unRef 功能",
               link: "/guide/migration",
+            },
+            {
+              text: "实现 proxyRefs 功能",
+              link: "/guide/a",
             },
           ],
         },

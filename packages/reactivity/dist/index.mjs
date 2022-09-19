@@ -152,6 +152,7 @@ import { isObject as isObject2, hasChanged } from "@relaxed/shared";
 var RefImpl = class {
   _value;
   _rawValue;
+  __v_isRef = true;
   dep;
   constructor(value) {
     this._rawValue = value;

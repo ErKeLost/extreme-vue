@@ -181,6 +181,7 @@ var import_shared3 = require("@relaxed/shared");
 var RefImpl = class {
   _value;
   _rawValue;
+  __v_isRef = true;
   dep;
   constructor(value) {
     this._rawValue = value;

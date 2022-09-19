@@ -1,21 +1,58 @@
-# Comparisons
+# Ref
 
-## WMR
+## ref 解析
 
-[WMR](https://github.com/preactjs/wmr) by the Preact team provides a similar feature set, and Vite 2.0's support for Rollup's plugin interface is inspired by it.
+> 因为响应式需要代理对象， ref 作为基于 reactive 的响应式对象， 支持基本类型，但是 proxy 需要代理的是对象，所以我们需要把 ref 变成一个对象这样才能变成响应式
+> ref 函数返回一个类 我们需要这个类去变成一个对象， 我们可以使用 类的 get， set 操作
 
-WMR is mainly designed for [Preact](https://preactjs.com/) projects, and offers more integrated features such as pre-rendering. In terms of scope, it's closer to a Preact meta framework, with the same emphasis on compact size as Preact itself. If you are using Preact, WMR is likely going to offer a more fine-tuned experience.
+```ts
+export function ref(value) {
+  return new RefImpl(value);
+}
 
-## @web/dev-server
+class RefImpl {
+  private _value: any;
+  private _rawValue: any;
+  // 创建一个dep 收集依赖
+  public dep;
+  constructor(value) {
+    // 存储 原始普通对象的value值 用于对比
+    this._rawValue = value;
+    this._value = convert(value);
+    // 判断value 是不是对象 是对象就装换成reactive
+    this.dep = new Set();
+  }
+  get value() {
+    trackRefValue(this);
+    // ref 只监听一个 value 的变化 value的依赖收集
+    return this._value;
+  }
+  set value(newValue) {
+    // 如果value 是一个 对象 就会被转换成reactive 新的值 是 proxy 对比 要转换成普通对象
+    // if (hasChanged(newValue, this._value)) {
+    if (hasChanged(newValue, this._rawValue)) {
+      // if (Object.is(newValue, this._value)) return
+      // 必须要先修改value的值 再去通知
+      this._rawValue = newValue;
+      this._value = convert(newValue);
+      triggerEffect(this.dep);
+    }
+  }
+}
 
-[@web/dev-server](https://modern-web.dev/docs/dev-server/overview/) (previously `es-dev-server`) is a great project and Vite 1.0's Koa-based server setup was inspired by it.
+export function trackEffect(dep) {
+  if (dep.has(activeEffect)) return;
+  dep.add(activeEffect);
+  activeEffect.deps.push(dep);
+}
 
-`@web/dev-server` is a bit lower-level in terms of scope. It does not provide official framework integrations, and requires manually setting up a Rollup configuration for the production build.
-
-Overall, Vite is a more opinionated / higher-level tool that aims to provide a more out-of-the-box workflow. That said, the `@web` umbrella project contains many other excellent tools that may benefit Vite users as well.
-
-## Snowpack
-
-[Snowpack](https://www.snowpack.dev/) was also a no-bundle native ESM dev server, very similar in scope to Vite. The project is no longer being maintained. The Snowpack team is now working on [Astro](https://astro.build/), a static site builder powered by Vite. The Astro team is now an active player in the ecosystem, and they are helping to improve Vite.
-
-Aside from different implementation details, the two projects shared a lot in terms of technical advantages over traditional tooling. Vite's dependency pre-bundling is also inspired by Snowpack v1 (now [`esinstall`](https://github.com/snowpackjs/snowpack/tree/main/esinstall)). Some of the main differences between the two projects are listed in [the v2 Comparisons Guide](https://v2.vitejs.dev/guide/comparisons).
+export function triggerEffect(dep) {
+  for (const effect of dep) {
+    if (effect.scheduler) {
+      effect.scheduler();
+    } else {
+      effect.run();
+    }
+  }
+}
+```
