@@ -1,7 +1,13 @@
 "use strict";
 (() => {
   // ../shared/src/index.ts
+  var isObject = (val) => {
+    return val !== null && typeof val === "object";
+  };
   var extend = Object.assign;
+  function hasChanged(value, oldValue) {
+    return !Object.is(value, oldValue);
+  }
 
   // src/effect.ts
   var activeEffect;
@@ -42,10 +48,9 @@
   }
   var targetMap = /* @__PURE__ */ new Map();
   function track(target, key) {
-    if (!activeEffect)
+    if (!isTracking()) {
       return;
-    if (!shouldTrack)
-      return;
+    }
     let depsMap = targetMap.get(target);
     if (!depsMap) {
       depsMap = /* @__PURE__ */ new Map();
@@ -56,14 +61,15 @@
       dep = /* @__PURE__ */ new Set();
       depsMap.set(key, dep);
     }
+    trackEffect(dep);
+  }
+  function trackEffect(dep) {
     if (dep.has(activeEffect))
       return;
     dep.add(activeEffect);
     activeEffect.deps.push(dep);
   }
-  function trigger(target, key) {
-    let depsMap = targetMap.get(target);
-    let dep = depsMap.get(key);
+  function triggerEffect(dep) {
     for (const effect2 of dep) {
       if (effect2.scheduler) {
         effect2.scheduler();
@@ -71,6 +77,11 @@
         effect2.run();
       }
     }
+  }
+  function trigger(target, key) {
+    let depsMap = targetMap.get(target);
+    let dep = depsMap.get(key);
+    triggerEffect(dep);
   }
   function effect(fn, options = {}) {
     const _effect = new ReactiveEffect(fn, options.scheduler);
@@ -81,18 +92,28 @@
     runner.effect = _effect;
     return runner;
   }
+  function isTracking() {
+    return shouldTrack && activeEffect !== void 0;
+  }
 
   // src/baseHandlers.ts
   var get = createGetter();
   var set = createSetter();
   var readonlyGet = createGetter(true);
-  function createGetter(isReadonly = false) {
+  var shallowReadonlyGet = createGetter(true, true);
+  function createGetter(isReadonly = false, shallow = false) {
     return function get2(target, key) {
       const res = Reflect.get(target, key);
       if (key === "_v_isReactive" /* IS_REACTIVE */) {
         return !isReadonly;
       } else if (key === "_v_isReadonly" /* IS_READONLY */) {
         return isReadonly;
+      }
+      if (shallow) {
+        return res;
+      }
+      if (isObject(res)) {
+        return isReadonly ? readonly(res) : reactive(res);
       }
       if (!isReadonly) {
         track(target, key);
@@ -118,16 +139,53 @@
       return true;
     }
   };
+  var shadowReadonlyHandlers = extend({}, readonlyHandlers, {
+    get: shallowReadonlyGet
+  });
 
   // src/reactive.ts
   function reactive(raw) {
-    return createActiveObject(raw, mutableHandlers);
+    return createReactiveObject(raw, mutableHandlers);
   }
   function readonly(raw) {
-    return createActiveObject(raw, readonlyHandlers);
+    return createReactiveObject(raw, readonlyHandlers);
   }
-  function createActiveObject(raw, Handlers) {
+  function createReactiveObject(raw, Handlers) {
     return new Proxy(raw, Handlers);
+  }
+
+  // src/ref.ts
+  var RefImpl = class {
+    _value;
+    _rawValue;
+    dep;
+    constructor(value) {
+      this._rawValue = value;
+      this._value = convert(value);
+      this.dep = /* @__PURE__ */ new Set();
+    }
+    get value() {
+      trackRefValue(this);
+      return this._value;
+    }
+    set value(newValue) {
+      if (hasChanged(newValue, this._rawValue)) {
+        this._rawValue = newValue;
+        this._value = convert(newValue);
+        triggerEffect(this.dep);
+      }
+    }
+  };
+  function ref(value) {
+    return new RefImpl(value);
+  }
+  function trackRefValue(ref2) {
+    if (isTracking()) {
+      trackEffect(ref2.dep);
+    }
+  }
+  function convert(value) {
+    return isObject(value) ? reactive(value) : value;
   }
 })();
 //# sourceMappingURL=index.global.js.map
