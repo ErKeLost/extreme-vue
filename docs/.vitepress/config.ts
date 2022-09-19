@@ -149,19 +149,19 @@ export default defineConfig({
               link: "/guide/static-deploy",
             },
             {
-              text: "Env Variables and Modes",
+              text: "reactive 和 readonly 嵌套对象转换功能",
               link: "/guide/env-and-mode",
             },
             {
-              text: "Server-Side Rendering (SSR)",
+              text: "实现shadowReadonly",
               link: "/guide/ssr",
             },
             {
-              text: "Backend Integration",
+              text: "Is Proxy",
               link: "/guide/backend-integration",
             },
             {
-              text: "Comparisons",
+              text: "Ref",
               link: "/guide/comparisons",
             },
             {
