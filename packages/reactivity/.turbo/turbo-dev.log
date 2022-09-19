@@ -408,4 +408,774 @@
 [32m@relaxed/reactivity:dev: [0m[34mIIFE[39m Build start
 [32m@relaxed/reactivity:dev: [0m[32mIIFE[39m [1mdist\index.global.js     [22m[32m4.47 KB[39m
 [32m@relaxed/reactivity:dev: [0m[32mIIFE[39m [1mdist\index.global.js.map [22m[32m21.82 KB[39m
-[32m@relaxed/rea
+[32m@relaxed/reactivity:dev: [0m[32mIIFE[39m ⚡️ Build success in 15ms
+[32m@relaxed/reactivity:dev: [0m[32mESM[39m [1mdist\index.mjs     [22m[32m4.11 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mESM[39m [1mdist\index.mjs.map [22m[32m20.41 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mESM[39m ⚡️ Build success in 20ms
+[32m@relaxed/reactivity:dev: [0m[32mCJS[39m [1mdist\index.js     [22m[32m5.24 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mCJS[39m [1mdist\index.js.map [22m[32m20.76 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mCJS[39m ⚡️ Build success in 20ms
+[32m@relaxed/reactivity:dev: [0m[34mCLI[39m Change detected: change src/ref.ts
+[32m@relaxed/reactivity:dev: [0m[34mCLI[39m Cleaning output folder
+[32m@relaxed/reactivity:dev: [0m[34mESM[39m Build start
+[32m@relaxed/reactivity:dev: [0m[34mCJS[39m Build start
+[32m@relaxed/reactivity:dev: [0m[34mIIFE[39m Build start
+[32m@relaxed/reactivity:dev: [0m[32mIIFE[39m [1mdist\index.global.js     [22m[32m4.47 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mIIFE[39m [1mdist\index.global.js.map [22m[32m21.84 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mIIFE[39m ⚡️ Build success in 17ms
+[32m@relaxed/reactivity:dev: [0m[32mESM[39m [1mdist\index.mjs     [22m[32m4.11 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mESM[39m [1mdist\index.mjs.map [22m[32m20.42 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mESM[39m ⚡️ Build success in 19ms
+[32m@relaxed/reactivity:dev: [0m[32mCJS[39m [1mdist\index.js     [22m[32m5.24 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mCJS[39m [1mdist\index.js.map [22m[32m20.77 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mCJS[39m ⚡️ Build success in 19ms
+[32m@relaxed/reactivity:dev: [0m[34mCLI[39m Change detected: change src/ref.ts
+[32m@relaxed/reactivity:dev: [0m[34mCLI[39m Cleaning output folder
+[32m@relaxed/reactivity:dev: [0m[34mESM[39m Build start
+[32m@relaxed/reactivity:dev: [0m[34mCJS[39m Build start
+[32m@relaxed/reactivity:dev: [0m[34mIIFE[39m Build start
+[32m@relaxed/reactivity:dev: [0m[32mIIFE[39m [1mdist\index.global.js     [22m[32m4.47 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mIIFE[39m [1mdist\index.global.js.map [22m[32m21.84 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mIIFE[39m ⚡️ Build success in 18ms
+[32m@relaxed/reactivity:dev: [0m[32mESM[39m [1mdist\index.mjs     [22m[32m4.11 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mESM[39m [1mdist\index.mjs.map [22m[32m20.42 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mESM[39m ⚡️ Build success in 24ms
+[32m@relaxed/reactivity:dev: [0m[32mCJS[39m [1mdist\index.js     [22m[32m5.24 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mCJS[39m [1mdist\index.js.map [22m[32m20.77 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mCJS[39m ⚡️ Build success in 27ms
+[32m@relaxed/reactivity:dev: [0m[34mCLI[39m Change detected: change src/ref.ts
+[32m@relaxed/reactivity:dev: [0m[34mCLI[39m Cleaning output folder
+[32m@relaxed/reactivity:dev: [0m[34mESM[39m Build start
+[32m@relaxed/reactivity:dev: [0m[34mCJS[39m Build start
+[32m@relaxed/reactivity:dev: [0m[34mIIFE[39m Build start
+[32m@relaxed/reactivity:dev: [0mX [ERROR] Expected ";" but found "get"
+[32m@relaxed/reactivity:dev: [0m
+[32m@relaxed/reactivity:dev: [0m    src/ref.ts:54:18:
+[32m@relaxed/reactivity:dev: [0m      54 │   判断调用了 get 或者 set  
+[32m@relaxed/reactivity:dev: [0m         │         ~~~
+[32m@relaxed/reactivity:dev: [0m         ╵         ;
+[32m@relaxed/reactivity:dev: [0m
+[32m@relaxed/reactivity:dev: [0m[31mIIFE[39m [31mBuild failed[39m
+[32m@relaxed/reactivity:dev: [0m[31mError: Build failed with 1 error:
+[32m@relaxed/reactivity:dev: [0msrc/ref.ts:54:18: ERROR: Expected ";" but found "get"
+[32m@relaxed/reactivity:dev: [0m    at failureErrorWithLog (D:\code-adny\mini-vue\node_modules\.pnpm\esbuild@0.15.7\node_modules\esbuild\lib\main.js:1624:15)
+[32m@relaxed/reactivity:dev: [0m    at D:\code-adny\mini-vue\node_modules\.pnpm\esbuild@0.15.7\node_modules\esbuild\lib\main.js:1266:28
+[32m@relaxed/reactivity:dev: [0m    at runOnEndCallbacks (D:\code-adny\mini-vue\node_modules\.pnpm\esbuild@0.15.7\node_modules\esbuild\lib\main.js:1046:63)
+[32m@relaxed/reactivity:dev: [0m    at buildResponseToResult (D:\code-adny\mini-vue\node_modules\.pnpm\esbuild@0.15.7\node_modules\esbuild\lib\main.js:1264:7)
+[32m@relaxed/reactivity:dev: [0m    at D:\code-adny\mini-vue\node_modules\.pnpm\esbuild@0.15.7\node_modules\esbuild\lib\main.js:1377:14
+[32m@relaxed/reactivity:dev: [0m    at D:\code-adny\mini-vue\node_modules\.pnpm\esbuild@0.15.7\node_modules\esbuild\lib\main.js:678:9
+[32m@relaxed/reactivity:dev: [0m    at handleIncomingPacket (D:\code-adny\mini-vue\node_modules\.pnpm\esbuild@0.15.7\node_modules\esbuild\lib\main.js:775:9)
+[32m@relaxed/reactivity:dev: [0m    at Socket.readFromStdout (D:\code-adny\mini-vue\node_modules\.pnpm\esbuild@0.15.7\node_modules\esbuild\lib\main.js:644:7)
+[32m@relaxed/reactivity:dev: [0m    at Socket.emit (node:events:526:28)
+[32m@relaxed/reactivity:dev: [0m    at addChunk (node:internal/streams/readable:315:12)[39m
+[32m@relaxed/reactivity:dev: [0mX [ERROR] Expected ";" but found "get"
+[32m@relaxed/reactivity:dev: [0m
+[32m@relaxed/reactivity:dev: [0m    src/ref.ts:54:18:
+[32m@relaxed/reactivity:dev: [0m      54 │   判断调用了 get 或者 set  
+[32m@relaxed/reactivity:dev: [0m         │         ~~~
+[32m@relaxed/reactivity:dev: [0m         ╵         ;
+[32m@relaxed/reactivity:dev: [0m
+[32m@relaxed/reactivity:dev: [0mX [ERROR] Expected ";" but found "get"
+[32m@relaxed/reactivity:dev: [0m
+[32m@relaxed/reactivity:dev: [0m    src/ref.ts:54:18:
+[32m@relaxed/reactivity:dev: [0m      54 │   判断调用了 get 或者 set  
+[32m@relaxed/reactivity:dev: [0m         │         ~~~
+[32m@relaxed/reactivity:dev: [0m         ╵         ;
+[32m@relaxed/reactivity:dev: [0m
+[32m@relaxed/reactivity:dev: [0m[31mCJS[39m [31mBuild failed[39m
+[32m@relaxed/reactivity:dev: [0m[31mESM[39m [31mBuild failed[39m
+[32m@relaxed/reactivity:dev: [0m[34mCLI[39m Change detected: change src/ref.ts
+[32m@relaxed/reactivity:dev: [0m[34mCLI[39m Cleaning output folder
+[32m@relaxed/reactivity:dev: [0m[34mESM[39m Build start
+[32m@relaxed/reactivity:dev: [0m[34mCJS[39m Build start
+[32m@relaxed/reactivity:dev: [0m[34mIIFE[39m Build start
+[32m@relaxed/reactivity:dev: [0m[32mIIFE[39m [1mdist\index.global.js     [22m[32m4.47 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mIIFE[39m [1mdist\index.global.js.map [22m[32m21.86 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mIIFE[39m ⚡️ Build success in 63ms
+[32m@relaxed/reactivity:dev: [0m[32mCJS[39m [1mdist\index.js     [22m[32m5.24 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mCJS[39m [1mdist\index.js.map [22m[32m20.80 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mCJS[39m ⚡️ Build success in 128ms
+[32m@relaxed/reactivity:dev: [0m[32mESM[39m [1mdist\index.mjs     [22m[32m4.11 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mESM[39m [1mdist\index.mjs.map [22m[32m20.45 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mESM[39m ⚡️ Build success in 142ms
+[32m@relaxed/reactivity:dev: [0m[34mCLI[39m Change detected: change src/ref.ts
+[32m@relaxed/reactivity:dev: [0m[34mCLI[39m Cleaning output folder
+[32m@relaxed/reactivity:dev: [0m[34mESM[39m Build start
+[32m@relaxed/reactivity:dev: [0m[34mCJS[39m Build start
+[32m@relaxed/reactivity:dev: [0m[34mIIFE[39m Build start
+[32m@relaxed/reactivity:dev: [0m[32mIIFE[39m [1mdist\index.global.js     [22m[32m4.47 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mIIFE[39m [1mdist\index.global.js.map [22m[32m21.88 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mIIFE[39m ⚡️ Build success in 16ms
+[32m@relaxed/reactivity:dev: [0m[32mESM[39m [1mdist\index.mjs     [22m[32m4.11 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mESM[39m [1mdist\index.mjs.map [22m[32m20.46 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mESM[39m ⚡️ Build success in 18ms
+[32m@relaxed/reactivity:dev: [0m[32mCJS[39m [1mdist\index.js     [22m[32m5.24 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mCJS[39m [1mdist\index.js.map [22m[32m20.82 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mCJS[39m ⚡️ Build success in 19ms
+[32m@relaxed/reactivity:dev: [0m[34mCLI[39m Change detected: change src/ref.ts
+[32m@relaxed/reactivity:dev: [0m[34mCLI[39m Cleaning output folder
+[32m@relaxed/reactivity:dev: [0m[34mESM[39m Build start
+[32m@relaxed/reactivity:dev: [0m[34mCJS[39m Build start
+[32m@relaxed/reactivity:dev: [0m[34mIIFE[39m Build start
+[32m@relaxed/reactivity:dev: [0m[32mIIFE[39m [1mdist\index.global.js     [22m[32m4.47 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mIIFE[39m [1mdist\index.global.js.map [22m[32m21.88 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mIIFE[39m ⚡️ Build success in 32ms
+[32m@relaxed/reactivity:dev: [0m[32mESM[39m [1mdist\index.mjs     [22m[32m4.11 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mESM[39m [1mdist\index.mjs.map [22m[32m20.47 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mESM[39m ⚡️ Build success in 44ms
+[32m@relaxed/reactivity:dev: [0m[32mCJS[39m [1mdist\index.js     [22m[32m5.24 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mCJS[39m [1mdist\index.js.map [22m[32m20.82 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mCJS[39m ⚡️ Build success in 44ms
+[32m@relaxed/reactivity:dev: [0m[34mCLI[39m Change detected: change src/ref.ts
+[32m@relaxed/reactivity:dev: [0m[34mCLI[39m Cleaning output folder
+[32m@relaxed/reactivity:dev: [0m[34mESM[39m Build start
+[32m@relaxed/reactivity:dev: [0m[34mCJS[39m Build start
+[32m@relaxed/reactivity:dev: [0m[34mIIFE[39m Build start
+[32m@relaxed/reactivity:dev: [0m[32mIIFE[39m [1mdist\index.global.js     [22m[32m4.47 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mIIFE[39m [1mdist\index.global.js.map [22m[32m21.90 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mIIFE[39m ⚡️ Build success in 32ms
+[32m@relaxed/reactivity:dev: [0m[32mESM[39m [1mdist\index.mjs     [22m[32m4.11 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mESM[39m [1mdist\index.mjs.map [22m[32m20.48 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mESM[39m ⚡️ Build success in 32ms
+[32m@relaxed/reactivity:dev: [0m[32mCJS[39m [1mdist\index.js     [22m[32m5.24 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mCJS[39m [1mdist\index.js.map [22m[32m20.83 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mCJS[39m ⚡️ Build success in 40ms
+[32m@relaxed/reactivity:dev: [0m[34mCLI[39m Change detected: change src/ref.ts
+[32m@relaxed/reactivity:dev: [0m[34mCLI[39m Cleaning output folder
+[32m@relaxed/reactivity:dev: [0m[34mESM[39m Build start
+[32m@relaxed/reactivity:dev: [0m[34mCJS[39m Build start
+[32m@relaxed/reactivity:dev: [0m[34mIIFE[39m Build start
+[32m@relaxed/reactivity:dev: [0m[32mIIFE[39m [1mdist\index.global.js     [22m[32m4.47 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mIIFE[39m [1mdist\index.global.js.map [22m[32m21.92 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mIIFE[39m ⚡️ Build success in 17ms
+[32m@relaxed/reactivity:dev: [0m[32mESM[39m [1mdist\index.mjs     [22m[32m4.11 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mESM[39m [1mdist\index.mjs.map [22m[32m20.50 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mESM[39m ⚡️ Build success in 21ms
+[32m@relaxed/reactivity:dev: [0m[32mCJS[39m [1mdist\index.js     [22m[32m5.24 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mCJS[39m [1mdist\index.js.map [22m[32m20.85 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mCJS[39m ⚡️ Build success in 21ms
+[32m@relaxed/reactivity:dev: [0m[34mCLI[39m Change detected: change src/ref.ts
+[32m@relaxed/reactivity:dev: [0m[34mCLI[39m Cleaning output folder
+[32m@relaxed/reactivity:dev: [0m[34mESM[39m Build start
+[32m@relaxed/reactivity:dev: [0m[34mCJS[39m Build start
+[32m@relaxed/reactivity:dev: [0m[34mIIFE[39m Build start
+[32m@relaxed/reactivity:dev: [0m[32mIIFE[39m [1mdist\index.global.js     [22m[32m4.47 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mIIFE[39m [1mdist\index.global.js.map [22m[32m21.92 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mIIFE[39m ⚡️ Build success in 18ms
+[32m@relaxed/reactivity:dev: [0m[32mESM[39m [1mdist\index.mjs     [22m[32m4.11 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mESM[39m [1mdist\index.mjs.map [22m[32m20.51 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mESM[39m ⚡️ Build success in 25ms
+[32m@relaxed/reactivity:dev: [0m[32mCJS[39m [1mdist\index.js     [22m[32m5.24 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mCJS[39m [1mdist\index.js.map [22m[32m20.86 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mCJS[39m ⚡️ Build success in 27ms
+[32m@relaxed/reactivity:dev: [0m[34mCLI[39m Change detected: change src/ref.ts
+[32m@relaxed/reactivity:dev: [0m[34mCLI[39m Cleaning output folder
+[32m@relaxed/reactivity:dev: [0m[34mESM[39m Build start
+[32m@relaxed/reactivity:dev: [0m[34mCJS[39m Build start
+[32m@relaxed/reactivity:dev: [0m[34mIIFE[39m Build start
+[32m@relaxed/reactivity:dev: [0m[32mIIFE[39m [1mdist\index.global.js     [22m[32m4.47 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mIIFE[39m [1mdist\index.global.js.map [22m[32m21.95 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mIIFE[39m ⚡️ Build success in 15ms
+[32m@relaxed/reactivity:dev: [0m[32mESM[39m [1mdist\index.mjs     [22m[32m4.11 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mESM[39m [1mdist\index.mjs.map [22m[32m20.53 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mESM[39m ⚡️ Build success in 18ms
+[32m@relaxed/reactivity:dev: [0m[32mCJS[39m [1mdist\index.js     [22m[32m5.24 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mCJS[39m [1mdist\index.js.map [22m[32m20.88 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mCJS[39m ⚡️ Build success in 20ms
+[32m@relaxed/reactivity:dev: [0m[34mCLI[39m Change detected: change src/ref.ts
+[32m@relaxed/reactivity:dev: [0m[34mCLI[39m Cleaning output folder
+[32m@relaxed/reactivity:dev: [0m[34mESM[39m Build start
+[32m@relaxed/reactivity:dev: [0m[34mCJS[39m Build start
+[32m@relaxed/reactivity:dev: [0m[34mIIFE[39m Build start
+[32m@relaxed/reactivity:dev: [0m[32mIIFE[39m [1mdist\index.global.js     [22m[32m4.47 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mIIFE[39m [1mdist\index.global.js.map [22m[32m21.96 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mIIFE[39m ⚡️ Build success in 16ms
+[32m@relaxed/reactivity:dev: [0m[32mCJS[39m [1mdist\index.js     [22m[32m5.24 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mCJS[39m [1mdist\index.js.map [22m[32m20.89 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mCJS[39m ⚡️ Build success in 21ms
+[32m@relaxed/reactivity:dev: [0m[32mESM[39m [1mdist\index.mjs     [22m[32m4.11 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mESM[39m [1mdist\index.mjs.map [22m[32m20.54 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mESM[39m ⚡️ Build success in 22ms
+[32m@relaxed/reactivity:dev: [0m[34mCLI[39m Change detected: change src/ref.ts
+[32m@relaxed/reactivity:dev: [0m[34mCLI[39m Cleaning output folder
+[32m@relaxed/reactivity:dev: [0m[34mESM[39m Build start
+[32m@relaxed/reactivity:dev: [0m[34mCJS[39m Build start
+[32m@relaxed/reactivity:dev: [0m[34mIIFE[39m Build start
+[32m@relaxed/reactivity:dev: [0mX [ERROR] Expected ")" but found "}"
+[32m@relaxed/reactivity:dev: [0m
+[32m@relaxed/reactivity:dev: [0m    src/ref.ts:58:4:
+[32m@relaxed/reactivity:dev: [0m      58 │     }
+[32m@relaxed/reactivity:dev: [0m         │     ^
+[32m@relaxed/reactivity:dev: [0m         ╵     )
+[32m@relaxed/reactivity:dev: [0m
+[32m@relaxed/reactivity:dev: [0mX [ERROR] Expected ")" but found "}"
+[32m@relaxed/reactivity:dev: [0m
+[32m@relaxed/reactivity:dev: [0m    src/ref.ts:58:4:
+[32m@relaxed/reactivity:dev: [0m      58 │     }
+[32m@relaxed/reactivity:dev: [0m         │     ^
+[32m@relaxed/reactivity:dev: [0m         ╵     )
+[32m@relaxed/reactivity:dev: [0m
+[32m@relaxed/reactivity:dev: [0mX [ERROR] Expected ")" but found "}"
+[32m@relaxed/reactivity:dev: [0m
+[32m@relaxed/reactivity:dev: [0m    src/ref.ts:58:4:
+[32m@relaxed/reactivity:dev: [0m      58 │     }
+[32m@relaxed/reactivity:dev: [0m         │     ^
+[32m@relaxed/reactivity:dev: [0m         ╵     )
+[32m@relaxed/reactivity:dev: [0m
+[32m@relaxed/reactivity:dev: [0m[31mIIFE[39m [31mBuild failed[39m
+[32m@relaxed/reactivity:dev: [0m[31mError: Build failed with 1 error:
+[32m@relaxed/reactivity:dev: [0msrc/ref.ts:58:4: ERROR: Expected ")" but found "}"
+[32m@relaxed/reactivity:dev: [0m    at failureErrorWithLog (D:\code-adny\mini-vue\node_modules\.pnpm\esbuild@0.15.7\node_modules\esbuild\lib\main.js:1624:15)
+[32m@relaxed/reactivity:dev: [0m    at D:\code-adny\mini-vue\node_modules\.pnpm\esbuild@0.15.7\node_modules\esbuild\lib\main.js:1266:28
+[32m@relaxed/reactivity:dev: [0m    at runOnEndCallbacks (D:\code-adny\mini-vue\node_modules\.pnpm\esbuild@0.15.7\node_modules\esbuild\lib\main.js:1046:63)
+[32m@relaxed/reactivity:dev: [0m    at buildResponseToResult (D:\code-adny\mini-vue\node_modules\.pnpm\esbuild@0.15.7\node_modules\esbuild\lib\main.js:1264:7)
+[32m@relaxed/reactivity:dev: [0m    at D:\code-adny\mini-vue\node_modules\.pnpm\esbuild@0.15.7\node_modules\esbuild\lib\main.js:1377:14
+[32m@relaxed/reactivity:dev: [0m    at D:\code-adny\mini-vue\node_modules\.pnpm\esbuild@0.15.7\node_modules\esbuild\lib\main.js:678:9
+[32m@relaxed/reactivity:dev: [0m    at handleIncomingPacket (D:\code-adny\mini-vue\node_modules\.pnpm\esbuild@0.15.7\node_modules\esbuild\lib\main.js:775:9)
+[32m@relaxed/reactivity:dev: [0m    at Socket.readFromStdout (D:\code-adny\mini-vue\node_modules\.pnpm\esbuild@0.15.7\node_modules\esbuild\lib\main.js:644:7)
+[32m@relaxed/reactivity:dev: [0m    at Socket.emit (node:events:526:28)
+[32m@relaxed/reactivity:dev: [0m    at addChunk (node:internal/streams/readable:315:12)[39m
+[32m@relaxed/reactivity:dev: [0m[31mESM[39m [31mBuild failed[39m
+[32m@relaxed/reactivity:dev: [0m[31mCJS[39m [31mBuild failed[39m
+[32m@relaxed/reactivity:dev: [0m[34mCLI[39m Change detected: change src/ref.ts
+[32m@relaxed/reactivity:dev: [0m[34mCLI[39m Cleaning output folder
+[32m@relaxed/reactivity:dev: [0m[34mESM[39m Build start
+[32m@relaxed/reactivity:dev: [0m[34mCJS[39m Build start
+[32m@relaxed/reactivity:dev: [0m[34mIIFE[39m Build start
+[32m@relaxed/reactivity:dev: [0m[32mIIFE[39m [1mdist\index.global.js     [22m[32m4.47 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mIIFE[39m [1mdist\index.global.js.map [22m[32m21.97 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mIIFE[39m ⚡️ Build success in 17ms
+[32m@relaxed/reactivity:dev: [0m[32mESM[39m [1mdist\index.mjs     [22m[32m4.11 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mESM[39m [1mdist\index.mjs.map [22m[32m20.55 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mESM[39m ⚡️ Build success in 31ms
+[32m@relaxed/reactivity:dev: [0m[32mCJS[39m [1mdist\index.js     [22m[32m5.24 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mCJS[39m [1mdist\index.js.map [22m[32m20.90 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mCJS[39m ⚡️ Build success in 35ms
+[32m@relaxed/reactivity:dev: [0m[34mCLI[39m Change detected: change src/ref.ts
+[32m@relaxed/reactivity:dev: [0m[34mCLI[39m Cleaning output folder
+[32m@relaxed/reactivity:dev: [0m[34mESM[39m Build start
+[32m@relaxed/reactivity:dev: [0m[34mCJS[39m Build start
+[32m@relaxed/reactivity:dev: [0m[34mIIFE[39m Build start
+[32m@relaxed/reactivity:dev: [0m[32mIIFE[39m [1mdist\index.global.js     [22m[32m4.47 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mIIFE[39m [1mdist\index.global.js.map [22m[32m21.98 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mIIFE[39m ⚡️ Build success in 15ms
+[32m@relaxed/reactivity:dev: [0m[32mESM[39m [1mdist\index.mjs     [22m[32m4.11 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mESM[39m [1mdist\index.mjs.map [22m[32m20.56 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mESM[39m ⚡️ Build success in 20ms
+[32m@relaxed/reactivity:dev: [0m[32mCJS[39m [1mdist\index.js     [22m[32m5.24 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mCJS[39m [1mdist\index.js.map [22m[32m20.92 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mCJS[39m ⚡️ Build success in 20ms
+[32m@relaxed/reactivity:dev: [0m[34mCLI[39m Change detected: change src/ref.ts
+[32m@relaxed/reactivity:dev: [0m[34mCLI[39m Cleaning output folder
+[32m@relaxed/reactivity:dev: [0m[34mESM[39m Build start
+[32m@relaxed/reactivity:dev: [0m[34mCJS[39m Build start
+[32m@relaxed/reactivity:dev: [0m[34mIIFE[39m Build start
+[32m@relaxed/reactivity:dev: [0mX [ERROR] Expected "{" but found "}"
+[32m@relaxed/reactivity:dev: [0m
+[32m@relaxed/reactivity:dev: [0m    src/ref.ts:59:2:
+[32m@relaxed/reactivity:dev: [0m      59 │   });
+[32m@relaxed/reactivity:dev: [0m         │   ^
+[32m@relaxed/reactivity:dev: [0m         ╵   {
+[32m@relaxed/reactivity:dev: [0m
+[32m@relaxed/reactivity:dev: [0mX [ERROR] Expected "{" but found "}"
+[32m@relaxed/reactivity:dev: [0m
+[32m@relaxed/reactivity:dev: [0m    src/ref.ts:59:2:
+[32m@relaxed/reactivity:dev: [0m      59 │   });
+[32m@relaxed/reactivity:dev: [0m         │   ^
+[32m@relaxed/reactivity:dev: [0m         ╵   {
+[32m@relaxed/reactivity:dev: [0m
+[32m@relaxed/reactivity:dev: [0mX [ERROR] Expected "{" but found "}"
+[32m@relaxed/reactivity:dev: [0m
+[32m@relaxed/reactivity:dev: [0m    src/ref.ts:59:2:
+[32m@relaxed/reactivity:dev: [0m      59 │   });
+[32m@relaxed/reactivity:dev: [0m         │   ^
+[32m@relaxed/reactivity:dev: [0m         ╵   {
+[32m@relaxed/reactivity:dev: [0m
+[32m@relaxed/reactivity:dev: [0m[31mIIFE[39m [31mBuild failed[39m
+[32m@relaxed/reactivity:dev: [0m[31mError: Build failed with 1 error:
+[32m@relaxed/reactivity:dev: [0msrc/ref.ts:59:2: ERROR: Expected "{" but found "}"
+[32m@relaxed/reactivity:dev: [0m    at failureErrorWithLog (D:\code-adny\mini-vue\node_modules\.pnpm\esbuild@0.15.7\node_modules\esbuild\lib\main.js:1624:15)
+[32m@relaxed/reactivity:dev: [0m    at D:\code-adny\mini-vue\node_modules\.pnpm\esbuild@0.15.7\node_modules\esbuild\lib\main.js:1266:28
+[32m@relaxed/reactivity:dev: [0m    at runOnEndCallbacks (D:\code-adny\mini-vue\node_modules\.pnpm\esbuild@0.15.7\node_modules\esbuild\lib\main.js:1046:63)
+[32m@relaxed/reactivity:dev: [0m    at buildResponseToResult (D:\code-adny\mini-vue\node_modules\.pnpm\esbuild@0.15.7\node_modules\esbuild\lib\main.js:1264:7)
+[32m@relaxed/reactivity:dev: [0m    at D:\code-adny\mini-vue\node_modules\.pnpm\esbuild@0.15.7\node_modules\esbuild\lib\main.js:1377:14
+[32m@relaxed/reactivity:dev: [0m    at D:\code-adny\mini-vue\node_modules\.pnpm\esbuild@0.15.7\node_modules\esbuild\lib\main.js:678:9
+[32m@relaxed/reactivity:dev: [0m    at handleIncomingPacket (D:\code-adny\mini-vue\node_modules\.pnpm\esbuild@0.15.7\node_modules\esbuild\lib\main.js:775:9)
+[32m@relaxed/reactivity:dev: [0m    at Socket.readFromStdout (D:\code-adny\mini-vue\node_modules\.pnpm\esbuild@0.15.7\node_modules\esbuild\lib\main.js:644:7)
+[32m@relaxed/reactivity:dev: [0m    at Socket.emit (node:events:526:28)
+[32m@relaxed/reactivity:dev: [0m    at addChunk (node:internal/streams/readable:315:12)[39m
+[32m@relaxed/reactivity:dev: [0m[31mESM[39m [31mBuild failed[39m
+[32m@relaxed/reactivity:dev: [0m[31mCJS[39m [31mBuild failed[39m
+[32m@relaxed/reactivity:dev: [0m[34mCLI[39m Change detected: change src/ref.ts
+[32m@relaxed/reactivity:dev: [0m[34mCLI[39m Cleaning output folder
+[32m@relaxed/reactivity:dev: [0m[34mESM[39m Build start
+[32m@relaxed/reactivity:dev: [0m[34mCJS[39m Build start
+[32m@relaxed/reactivity:dev: [0m[34mIIFE[39m Build start
+[32m@relaxed/reactivity:dev: [0mX [ERROR] Expected "{" but found "}"
+[32m@relaxed/reactivity:dev: [0m
+[32m@relaxed/reactivity:dev: [0m    src/ref.ts:59:2:
+[32m@relaxed/reactivity:dev: [0m      59 │   });
+[32m@relaxed/reactivity:dev: [0m         │   ^
+[32m@relaxed/reactivity:dev: [0m         ╵   {
+[32m@relaxed/reactivity:dev: [0m
+[32m@relaxed/reactivity:dev: [0mX [ERROR] Expected "{" but found "}"
+[32m@relaxed/reactivity:dev: [0m
+[32m@relaxed/reactivity:dev: [0m    src/ref.ts:59:2:
+[32m@relaxed/reactivity:dev: [0m      59 │   });
+[32m@relaxed/reactivity:dev: [0m         │   ^
+[32m@relaxed/reactivity:dev: [0m         ╵   {
+[32m@relaxed/reactivity:dev: [0m
+[32m@relaxed/reactivity:dev: [0m[31mIIFE[39m [31mBuild failed[39m
+[32m@relaxed/reactivity:dev: [0mX [ERROR] Expected "{" but found "}"
+[32m@relaxed/reactivity:dev: [0m
+[32m@relaxed/reactivity:dev: [0m    src/ref.ts:59:2:
+[32m@relaxed/reactivity:dev: [0m      59 │   });
+[32m@relaxed/reactivity:dev: [0m         │   ^
+[32m@relaxed/reactivity:dev: [0m         ╵   {
+[32m@relaxed/reactivity:dev: [0m
+[32m@relaxed/reactivity:dev: [0m[31mError: Build failed with 1 error:
+[32m@relaxed/reactivity:dev: [0msrc/ref.ts:59:2: ERROR: Expected "{" but found "}"
+[32m@relaxed/reactivity:dev: [0m    at failureErrorWithLog (D:\code-adny\mini-vue\node_modules\.pnpm\esbuild@0.15.7\node_modules\esbuild\lib\main.js:1624:15)
+[32m@relaxed/reactivity:dev: [0m    at D:\code-adny\mini-vue\node_modules\.pnpm\esbuild@0.15.7\node_modules\esbuild\lib\main.js:1266:28
+[32m@relaxed/reactivity:dev: [0m    at runOnEndCallbacks (D:\code-adny\mini-vue\node_modules\.pnpm\esbuild@0.15.7\node_modules\esbuild\lib\main.js:1046:63)
+[32m@relaxed/reactivity:dev: [0m    at buildResponseToResult (D:\code-adny\mini-vue\node_modules\.pnpm\esbuild@0.15.7\node_modules\esbuild\lib\main.js:1264:7)
+[32m@relaxed/reactivity:dev: [0m    at D:\code-adny\mini-vue\node_modules\.pnpm\esbuild@0.15.7\node_modules\esbuild\lib\main.js:1377:14
+[32m@relaxed/reactivity:dev: [0m    at D:\code-adny\mini-vue\node_modules\.pnpm\esbuild@0.15.7\node_modules\esbuild\lib\main.js:678:9
+[32m@relaxed/reactivity:dev: [0m    at handleIncomingPacket (D:\code-adny\mini-vue\node_modules\.pnpm\esbuild@0.15.7\node_modules\esbuild\lib\main.js:775:9)
+[32m@relaxed/reactivity:dev: [0m    at Socket.readFromStdout (D:\code-adny\mini-vue\node_modules\.pnpm\esbuild@0.15.7\node_modules\esbuild\lib\main.js:644:7)
+[32m@relaxed/reactivity:dev: [0m    at Socket.emit (node:events:526:28)
+[32m@relaxed/reactivity:dev: [0m    at addChunk (node:internal/streams/readable:315:12)[39m
+[32m@relaxed/reactivity:dev: [0m[31mESM[39m [31mBuild failed[39m
+[32m@relaxed/reactivity:dev: [0m[31mCJS[39m [31mBuild failed[39m
+[32m@relaxed/reactivity:dev: [0m[34mCLI[39m Change detected: change src/ref.ts
+[32m@relaxed/reactivity:dev: [0m[34mCLI[39m Cleaning output folder
+[32m@relaxed/reactivity:dev: [0m[34mESM[39m Build start
+[32m@relaxed/reactivity:dev: [0m[34mCJS[39m Build start
+[32m@relaxed/reactivity:dev: [0m[34mIIFE[39m Build start
+[32m@relaxed/reactivity:dev: [0m[32mIIFE[39m [1mdist\index.global.js     [22m[32m4.47 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mIIFE[39m [1mdist\index.global.js.map [22m[32m22.03 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mIIFE[39m ⚡️ Build success in 11ms
+[32m@relaxed/reactivity:dev: [0m[32mESM[39m [1mdist\index.mjs     [22m[32m4.11 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mESM[39m [1mdist\index.mjs.map [22m[32m20.61 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mESM[39m ⚡️ Build success in 14ms
+[32m@relaxed/reactivity:dev: [0m[32mCJS[39m [1mdist\index.js     [22m[32m5.24 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mCJS[39m [1mdist\index.js.map [22m[32m20.96 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mCJS[39m ⚡️ Build success in 15ms
+[32m@relaxed/reactivity:dev: [0m[34mCLI[39m Change detected: change src/ref.ts
+[32m@relaxed/reactivity:dev: [0m[34mCLI[39m Cleaning output folder
+[32m@relaxed/reactivity:dev: [0m[34mESM[39m Build start
+[32m@relaxed/reactivity:dev: [0m[34mCJS[39m Build start
+[32m@relaxed/reactivity:dev: [0m[34mIIFE[39m Build start
+[32m@relaxed/reactivity:dev: [0m[32mIIFE[39m [1mdist\index.global.js     [22m[32m4.47 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mIIFE[39m [1mdist\index.global.js.map [22m[32m22.04 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mIIFE[39m ⚡️ Build success in 14ms
+[32m@relaxed/reactivity:dev: [0m[32mCJS[39m [1mdist\index.js     [22m[32m5.24 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mCJS[39m [1mdist\index.js.map [22m[32m20.98 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mCJS[39m ⚡️ Build success in 20ms
+[32m@relaxed/reactivity:dev: [0m[32mESM[39m [1mdist\index.mjs     [22m[32m4.11 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mESM[39m [1mdist\index.mjs.map [22m[32m20.63 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mESM[39m ⚡️ Build success in 22ms
+[32m@relaxed/reactivity:dev: [0m[34mCLI[39m Change detected: change src/ref.ts
+[32m@relaxed/reactivity:dev: [0m[34mCLI[39m Cleaning output folder
+[32m@relaxed/reactivity:dev: [0m[34mESM[39m Build start
+[32m@relaxed/reactivity:dev: [0m[34mCJS[39m Build start
+[32m@relaxed/reactivity:dev: [0m[34mIIFE[39m Build start
+[32m@relaxed/reactivity:dev: [0m[32mIIFE[39m [1mdist\index.global.js     [22m[32m4.47 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mIIFE[39m [1mdist\index.global.js.map [22m[32m22.06 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mIIFE[39m ⚡️ Build success in 20ms
+[32m@relaxed/reactivity:dev: [0m[32mESM[39m [1mdist\index.mjs     [22m[32m4.11 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mESM[39m [1mdist\index.mjs.map [22m[32m20.65 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mESM[39m ⚡️ Build success in 25ms
+[32m@relaxed/reactivity:dev: [0m[32mCJS[39m [1mdist\index.js     [22m[32m5.24 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mCJS[39m [1mdist\index.js.map [22m[32m21.00 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mCJS[39m ⚡️ Build success in 25ms
+[32m@relaxed/reactivity:dev: [0m[34mCLI[39m Change detected: change src/ref.ts
+[32m@relaxed/reactivity:dev: [0m[34mCLI[39m Cleaning output folder
+[32m@relaxed/reactivity:dev: [0m[34mESM[39m Build start
+[32m@relaxed/reactivity:dev: [0m[34mCJS[39m Build start
+[32m@relaxed/reactivity:dev: [0m[34mIIFE[39m Build start
+[32m@relaxed/reactivity:dev: [0m[32mIIFE[39m [1mdist\index.global.js     [22m[32m4.47 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mIIFE[39m [1mdist\index.global.js.map [22m[32m22.07 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mIIFE[39m ⚡️ Build success in 12ms
+[32m@relaxed/reactivity:dev: [0m[32mESM[39m [1mdist\index.mjs     [22m[32m4.11 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mESM[39m [1mdist\index.mjs.map [22m[32m20.65 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mESM[39m ⚡️ Build success in 18ms
+[32m@relaxed/reactivity:dev: [0m[32mCJS[39m [1mdist\index.js     [22m[32m5.24 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mCJS[39m [1mdist\index.js.map [22m[32m21.00 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mCJS[39m ⚡️ Build success in 18ms
+[32m@relaxed/reactivity:dev: [0m[34mCLI[39m Change detected: change src/ref.ts
+[32m@relaxed/reactivity:dev: [0m[34mCLI[39m Cleaning output folder
+[32m@relaxed/reactivity:dev: [0m[34mESM[39m Build start
+[32m@relaxed/reactivity:dev: [0m[34mCJS[39m Build start
+[32m@relaxed/reactivity:dev: [0m[34mIIFE[39m Build start
+[32m@relaxed/reactivity:dev: [0mX [ERROR] Unexpected ")"
+[32m@relaxed/reactivity:dev: [0m
+[32m@relaxed/reactivity:dev: [0m    src/ref.ts:60:9:
+[32m@relaxed/reactivity:dev: [0m      60 │       if()
+[32m@relaxed/reactivity:dev: [0m         ╵          ^
+[32m@relaxed/reactivity:dev: [0m
+[32m@relaxed/reactivity:dev: [0m[31mIIFE[39m [31mBuild failed[39m
+[32m@relaxed/reactivity:dev: [0m[31mError: Build failed with 1 error:
+[32m@relaxed/reactivity:dev: [0msrc/ref.ts:60:9: ERROR: Unexpected ")"
+[32m@relaxed/reactivity:dev: [0m    at failureErrorWithLog (D:\code-adny\mini-vue\node_modules\.pnpm\esbuild@0.15.7\node_modules\esbuild\lib\main.js:1624:15)
+[32m@relaxed/reactivity:dev: [0m    at D:\code-adny\mini-vue\node_modules\.pnpm\esbuild@0.15.7\node_modules\esbuild\lib\main.js:1266:28
+[32m@relaxed/reactivity:dev: [0m    at runOnEndCallbacks (D:\code-adny\mini-vue\node_modules\.pnpm\esbuild@0.15.7\node_modules\esbuild\lib\main.js:1046:63)
+[32m@relaxed/reactivity:dev: [0m    at buildResponseToResult (D:\code-adny\mini-vue\node_modules\.pnpm\esbuild@0.15.7\node_modules\esbuild\lib\main.js:1264:7)
+[32m@relaxed/reactivity:dev: [0m    at D:\code-adny\mini-vue\node_modules\.pnpm\esbuild@0.15.7\node_modules\esbuild\lib\main.js:1377:14
+[32m@relaxed/reactivity:dev: [0m    at D:\code-adny\mini-vue\node_modules\.pnpm\esbuild@0.15.7\node_modules\esbuild\lib\main.js:678:9
+[32m@relaxed/reactivity:dev: [0m    at handleIncomingPacket (D:\code-adny\mini-vue\node_modules\.pnpm\esbuild@0.15.7\node_modules\esbuild\lib\main.js:775:9)
+[32m@relaxed/reactivity:dev: [0m    at Socket.readFromStdout (D:\code-adny\mini-vue\node_modules\.pnpm\esbuild@0.15.7\node_modules\esbuild\lib\main.js:644:7)
+[32m@relaxed/reactivity:dev: [0m    at Socket.emit (node:events:526:28)
+[32m@relaxed/reactivity:dev: [0m    at addChunk (node:internal/streams/readable:315:12)[39m
+[32m@relaxed/reactivity:dev: [0mX [ERROR] Unexpected ")"
+[32m@relaxed/reactivity:dev: [0m
+[32m@relaxed/reactivity:dev: [0m    src/ref.ts:60:9:
+[32m@relaxed/reactivity:dev: [0m      60 │       if()
+[32m@relaxed/reactivity:dev: [0m         ╵          ^
+[32m@relaxed/reactivity:dev: [0m
+[32m@relaxed/reactivity:dev: [0mX [ERROR] Unexpected ")"
+[32m@relaxed/reactivity:dev: [0m
+[32m@relaxed/reactivity:dev: [0m    src/ref.ts:60:9:
+[32m@relaxed/reactivity:dev: [0m      60 │       if()
+[32m@relaxed/reactivity:dev: [0m         ╵          ^
+[32m@relaxed/reactivity:dev: [0m
+[32m@relaxed/reactivity:dev: [0m[31mCJS[39m [31mBuild failed[39m
+[32m@relaxed/reactivity:dev: [0m[31mESM[39m [31mBuild failed[39m
+[32m@relaxed/reactivity:dev: [0m[34mCLI[39m Change detected: change src/ref.ts
+[32m@relaxed/reactivity:dev: [0m[34mCLI[39m Cleaning output folder
+[32m@relaxed/reactivity:dev: [0m[34mESM[39m Build start
+[32m@relaxed/reactivity:dev: [0m[34mCJS[39m Build start
+[32m@relaxed/reactivity:dev: [0m[34mIIFE[39m Build start
+[32m@relaxed/reactivity:dev: [0mX [ERROR] Unexpected "}"
+[32m@relaxed/reactivity:dev: [0m
+[32m@relaxed/reactivity:dev: [0m    src/ref.ts:61:4:
+[32m@relaxed/reactivity:dev: [0m      61 │     }
+[32m@relaxed/reactivity:dev: [0m         ╵     ^
+[32m@relaxed/reactivity:dev: [0m
+[32m@relaxed/reactivity:dev: [0mX [X [ERROR] Unexpected "}"
+[32m@relaxed/reactivity:dev: [0m
+[32m@relaxed/reactivity:dev: [0m    src/ref.ts:61:4:
+[32m@relaxed/reactivity:dev: [0m      61 │     }
+[32m@relaxed/reactivity:dev: [0m         ╵     ^
+[32m@relaxed/reactivity:dev: [0m
+[32m@relaxed/reactivity:dev: [0mERROR] Unexpected "}"
+[32m@relaxed/reactivity:dev: [0m
+[32m@relaxed/reactivity:dev: [0m    src/ref.ts:61:4:
+[32m@relaxed/reactivity:dev: [0m      61 │     }
+[32m@relaxed/reactivity:dev: [0m         ╵     ^
+[32m@relaxed/reactivity:dev: [0m
+[32m@relaxed/reactivity:dev: [0m[31mIIFE[39m [31mBuild failed[39m
+[32m@relaxed/reactivity:dev: [0m[31mError: Build failed with 1 error:
+[32m@relaxed/reactivity:dev: [0msrc/ref.ts:61:4: ERROR: Unexpected "}"
+[32m@relaxed/reactivity:dev: [0m    at failureErrorWithLog (D:\code-adny\mini-vue\node_modules\.pnpm\esbuild@0.15.7\node_modules\esbuild\lib\main.js:1624:15)
+[32m@relaxed/reactivity:dev: [0m    at D:\code-adny\mini-vue\node_modules\.pnpm\esbuild@0.15.7\node_modules\esbuild\lib\main.js:1266:28
+[32m@relaxed/reactivity:dev: [0m    at runOnEndCallbacks (D:\code-adny\mini-vue\node_modules\.pnpm\esbuild@0.15.7\node_modules\esbuild\lib\main.js:1046:63)
+[32m@relaxed/reactivity:dev: [0m    at buildResponseToResult (D:\code-adny\mini-vue\node_modules\.pnpm\esbuild@0.15.7\node_modules\esbuild\lib\main.js:1264:7)
+[32m@relaxed/reactivity:dev: [0m    at D:\code-adny\mini-vue\node_modules\.pnpm\esbuild@0.15.7\node_modules\esbuild\lib\main.js:1377:14
+[32m@relaxed/reactivity:dev: [0m    at D:\code-adny\mini-vue\node_modules\.pnpm\esbuild@0.15.7\node_modules\esbuild\lib\main.js:678:9
+[32m@relaxed/reactivity:dev: [0m    at handleIncomingPacket (D:\code-adny\mini-vue\node_modules\.pnpm\esbuild@0.15.7\node_modules\esbuild\lib\main.js:775:9)
+[32m@relaxed/reactivity:dev: [0m    at Socket.readFromStdout (D:\code-adny\mini-vue\node_modules\.pnpm\esbuild@0.15.7\node_modules\esbuild\lib\main.js:644:7)
+[32m@relaxed/reactivity:dev: [0m    at Socket.emit (node:events:526:28)
+[32m@relaxed/reactivity:dev: [0m    at addChunk (node:internal/streams/readable:315:12)[39m
+[32m@relaxed/reactivity:dev: [0m[31mCJS[39m [31mBuild failed[39m
+[32m@relaxed/reactivity:dev: [0m[31mESM[39m [31mBuild failed[39m
+[32m@relaxed/reactivity:dev: [0m[34mCLI[39m Change detected: change src/ref.ts
+[32m@relaxed/reactivity:dev: [0m[34mCLI[39m Cleaning output folder
+[32m@relaxed/reactivity:dev: [0m[34mESM[39m Build start
+[32m@relaxed/reactivity:dev: [0m[34mCJS[39m Build start
+[32m@relaxed/reactivity:dev: [0m[34mIIFE[39m Build start
+[32m@relaxed/reactivity:dev: [0mX [ERROR] Expected ")" but found "}"
+[32m@relaxed/reactivity:dev: [0m
+[32m@relaxed/reactivity:dev: [0m    src/ref.ts:61:4:
+[32m@relaxed/reactivity:dev: [0m      61 │     }
+[32m@relaxed/reactivity:dev: [0m         │     ^
+[32m@relaxed/reactivity:dev: [0m         ╵     )
+[32m@relaxed/reactivity:dev: [0m
+[32m@relaxed/reactivity:dev: [0mX [ERROR] Expected ")" but found "}"
+[32m@relaxed/reactivity:dev: [0m
+[32m@relaxed/reactivity:dev: [0m    src/ref.ts:61:4:
+[32m@relaxed/reactivity:dev: [0m      61 │     }
+[32m@relaxed/reactivity:dev: [0m         │     ^
+[32m@relaxed/reactivity:dev: [0m         ╵     )
+[32m@relaxed/reactivity:dev: [0m
+[32m@relaxed/reactivity:dev: [0mX [ERROR] Expected ")" but found "}"
+[32m@relaxed/reactivity:dev: [0m
+[32m@relaxed/reactivity:dev: [0m    src/ref.ts:61:4:
+[32m@relaxed/reactivity:dev: [0m      61 │     }
+[32m@relaxed/reactivity:dev: [0m         │     ^
+[32m@relaxed/reactivity:dev: [0m         ╵     )
+[32m@relaxed/reactivity:dev: [0m
+[32m@relaxed/reactivity:dev: [0m[31mIIFE[39m [31mBuild failed[39m
+[32m@relaxed/reactivity:dev: [0m[31mError: Build failed with 1 error:
+[32m@relaxed/reactivity:dev: [0msrc/ref.ts:61:4: ERROR: Expected ")" but found "}"
+[32m@relaxed/reactivity:dev: [0m    at failureErrorWithLog (D:\code-adny\mini-vue\node_modules\.pnpm\esbuild@0.15.7\node_modules\esbuild\lib\main.js:1624:15)
+[32m@relaxed/reactivity:dev: [0m    at D:\code-adny\mini-vue\node_modules\.pnpm\esbuild@0.15.7\node_modules\esbuild\lib\main.js:1266:28
+[32m@relaxed/reactivity:dev: [0m    at runOnEndCallbacks (D:\code-adny\mini-vue\node_modules\.pnpm\esbuild@0.15.7\node_modules\esbuild\lib\main.js:1046:63)
+[32m@relaxed/reactivity:dev: [0m    at buildResponseToResult (D:\code-adny\mini-vue\node_modules\.pnpm\esbuild@0.15.7\node_modules\esbuild\lib\main.js:1264:7)
+[32m@relaxed/reactivity:dev: [0m    at D:\code-adny\mini-vue\node_modules\.pnpm\esbuild@0.15.7\node_modules\esbuild\lib\main.js:1377:14
+[32m@relaxed/reactivity:dev: [0m    at D:\code-adny\mini-vue\node_modules\.pnpm\esbuild@0.15.7\node_modules\esbuild\lib\main.js:678:9
+[32m@relaxed/reactivity:dev: [0m    at handleIncomingPacket (D:\code-adny\mini-vue\node_modules\.pnpm\esbuild@0.15.7\node_modules\esbuild\lib\main.js:775:9)
+[32m@relaxed/reactivity:dev: [0m    at Socket.readFromStdout (D:\code-adny\mini-vue\node_modules\.pnpm\esbuild@0.15.7\node_modules\esbuild\lib\main.js:644:7)
+[32m@relaxed/reactivity:dev: [0m    at Socket.emit (node:events:526:28)
+[32m@relaxed/reactivity:dev: [0m    at addChunk (node:internal/streams/readable:315:12)[39m
+[32m@relaxed/reactivity:dev: [0m[31mESM[39m [31mBuild failed[39m
+[32m@relaxed/reactivity:dev: [0m[31mCJS[39m [31mBuild failed[39m
+[32m@relaxed/reactivity:dev: [0m[34mCLI[39m Change detected: change src/ref.ts
+[32m@relaxed/reactivity:dev: [0m[34mCLI[39m Cleaning output folder
+[32m@relaxed/reactivity:dev: [0m[34mESM[39m Build start
+[32m@relaxed/reactivity:dev: [0m[34mCJS[39m Build start
+[32m@relaxed/reactivity:dev: [0m[34mIIFE[39m Build start
+[32m@relaxed/reactivity:dev: [0mX [ERROR] Expected ")" but found "}"
+[32m@relaxed/reactivity:dev: [0m
+[32m@relaxed/reactivity:dev: [0m    src/ref.ts:61:4:
+[32m@relaxed/reactivity:dev: [0m      61 │     }
+[32m@relaxed/reactivity:dev: [0m         │     ^
+[32m@relaxed/reactivity:dev: [0m         ╵     )
+[32m@relaxed/reactivity:dev: [0m
+[32m@relaxed/reactivity:dev: [0mX [ERROR] Expected ")" but found "}"
+[32m@relaxed/reactivity:dev: [0m
+[32m@relaxed/reactivity:dev: [0m    src/ref.ts:61:4:
+[32m@relaxed/reactivity:dev: [0m      61 │     }
+[32m@relaxed/reactivity:dev: [0m         │     ^
+[32m@relaxed/reactivity:dev: [0m         ╵     )
+[32m@relaxed/reactivity:dev: [0m
+[32m@relaxed/reactivity:dev: [0m[31mIIFE[39m [31mBuild failed[39m
+[32m@relaxed/reactivity:dev: [0m[31mError: Build failed with 1 error:
+[32m@relaxed/reactivity:dev: [0msrc/ref.ts:61:4: ERROR: Expected ")" but found "}"
+[32m@relaxed/reactivity:dev: [0m    at failureErrorWithLog (D:\code-adny\mini-vue\node_modules\.pnpm\esbuild@0.15.7\node_modules\esbuild\lib\main.js:1624:15)
+[32m@relaxed/reactivity:dev: [0m    at D:\code-adny\mini-vue\node_modules\.pnpm\esbuild@0.15.7\node_modules\esbuild\lib\main.js:1266:28
+[32m@relaxed/reactivity:dev: [0m    at runOnEndCallbacks (D:\code-adny\mini-vue\node_modules\.pnpm\esbuild@0.15.7\node_modules\esbuild\lib\main.js:1046:63)
+[32m@relaxed/reactivity:dev: [0m    at buildResponseToResult (D:\code-adny\mini-vue\node_modules\.pnpm\esbuild@0.15.7\node_modules\esbuild\lib\main.js:1264:7)
+[32m@relaxed/reactivity:dev: [0m    at D:\code-adny\mini-vue\node_modules\.pnpm\esbuild@0.15.7\node_modules\esbuild\lib\main.js:1377:14
+[32m@relaxed/reactivity:dev: [0m    at D:\code-adny\mini-vue\node_modules\.pnpm\esbuild@0.15.7\node_modules\esbuild\lib\main.js:678:9
+[32m@relaxed/reactivity:dev: [0m    at handleIncomingPacket (D:\code-adny\mini-vue\node_modules\.pnpm\esbuild@0.15.7\node_modules\esbuild\lib\main.js:775:9)
+[32m@relaxed/reactivity:dev: [0m    at Socket.readFromStdout (D:\code-adny\mini-vue\node_modules\.pnpm\esbuild@0.15.7\node_modules\esbuild\lib\main.js:644:7)
+[32m@relaxed/reactivity:dev: [0m    at Socket.emit (node:events:526:28)
+[32m@relaxed/reactivity:dev: [0m    at addChunk (node:internal/streams/readable:315:12)[39m
+[32m@relaxed/reactivity:dev: [0mX [ERROR] Expected ")" but found "}"
+[32m@relaxed/reactivity:dev: [0m
+[32m@relaxed/reactivity:dev: [0m    src/ref.ts:61:4:
+[32m@relaxed/reactivity:dev: [0m      61 │     }
+[32m@relaxed/reactivity:dev: [0m         │     ^
+[32m@relaxed/reactivity:dev: [0m         ╵     )
+[32m@relaxed/reactivity:dev: [0m
+[32m@relaxed/reactivity:dev: [0m[31mESM[39m [31mBuild failed[39m
+[32m@relaxed/reactivity:dev: [0m[31mCJS[39m [31mBuild failed[39m
+[32m@relaxed/reactivity:dev: [0m[34mCLI[39m Change detected: change src/ref.ts
+[32m@relaxed/reactivity:dev: [0m[34mCLI[39m Cleaning output folder
+[32m@relaxed/reactivity:dev: [0m[34mESM[39m Build start
+[32m@relaxed/reactivity:dev: [0m[34mCJS[39m Build start
+[32m@relaxed/reactivity:dev: [0m[34mIIFE[39m Build start
+[32m@relaxed/reactivity:dev: [0mX [ERROR] Unexpected "}"
+[32m@relaxed/reactivity:dev: [0m
+[32m@relaxed/reactivity:dev: [0m    src/ref.ts:61:4:
+[32m@relaxed/reactivity:dev: [0m      61 │     }
+[32m@relaxed/reactivity:dev: [0m         ╵     ^
+[32m@relaxed/reactivity:dev: [0m
+[32m@relaxed/reactivity:dev: [0mX [ERROR] Unexpected "}"
+[32m@relaxed/reactivity:dev: [0m
+[32m@relaxed/reactivity:dev: [0m    src/ref.ts:61:4:
+[32m@relaxed/reactivity:dev: [0m      61 │     }
+[32m@relaxed/reactivity:dev: [0m         ╵     ^
+[32m@relaxed/reactivity:dev: [0m
+[32m@relaxed/reactivity:dev: [0m[31mIIFE[39m [31mBuild failed[39m
+[32m@relaxed/reactivity:dev: [0mX [ERROR] Unexpected "}"
+[32m@relaxed/reactivity:dev: [0m
+[32m@relaxed/reactivity:dev: [0m    src/ref.ts:61:4:
+[32m@relaxed/reactivity:dev: [0m      61 │     }
+[32m@relaxed/reactivity:dev: [0m         ╵     ^
+[32m@relaxed/reactivity:dev: [0m
+[32m@relaxed/reactivity:dev: [0m[31mError: Build failed with 1 error:
+[32m@relaxed/reactivity:dev: [0msrc/ref.ts:61:4: ERROR: Unexpected "}"
+[32m@relaxed/reactivity:dev: [0m    at failureErrorWithLog (D:\code-adny\mini-vue\node_modules\.pnpm\esbuild@0.15.7\node_modules\esbuild\lib\main.js:1624:15)
+[32m@relaxed/reactivity:dev: [0m    at D:\code-adny\mini-vue\node_modules\.pnpm\esbuild@0.15.7\node_modules\esbuild\lib\main.js:1266:28
+[32m@relaxed/reactivity:dev: [0m    at runOnEndCallbacks (D:\code-adny\mini-vue\node_modules\.pnpm\esbuild@0.15.7\node_modules\esbuild\lib\main.js:1046:63)
+[32m@relaxed/reactivity:dev: [0m    at buildResponseToResult (D:\code-adny\mini-vue\node_modules\.pnpm\esbuild@0.15.7\node_modules\esbuild\lib\main.js:1264:7)
+[32m@relaxed/reactivity:dev: [0m    at D:\code-adny\mini-vue\node_modules\.pnpm\esbuild@0.15.7\node_modules\esbuild\lib\main.js:1377:14
+[32m@relaxed/reactivity:dev: [0m    at D:\code-adny\mini-vue\node_modules\.pnpm\esbuild@0.15.7\node_modules\esbuild\lib\main.js:678:9
+[32m@relaxed/reactivity:dev: [0m    at handleIncomingPacket (D:\code-adny\mini-vue\node_modules\.pnpm\esbuild@0.15.7\node_modules\esbuild\lib\main.js:775:9)
+[32m@relaxed/reactivity:dev: [0m    at Socket.readFromStdout (D:\code-adny\mini-vue\node_modules\.pnpm\esbuild@0.15.7\node_modules\esbuild\lib\main.js:644:7)
+[32m@relaxed/reactivity:dev: [0m    at Socket.emit (node:events:526:28)
+[32m@relaxed/reactivity:dev: [0m    at addChunk (node:internal/streams/readable:315:12)[39m
+[32m@relaxed/reactivity:dev: [0m[31mESM[39m [31mBuild failed[39m
+[32m@relaxed/reactivity:dev: [0m[31mCJS[39m [31mBuild failed[39m
+[32m@relaxed/reactivity:dev: [0m[34mCLI[39m Change detected: change src/ref.ts
+[32m@relaxed/reactivity:dev: [0m[34mCLI[39m Cleaning output folder
+[32m@relaxed/reactivity:dev: [0m[34mESM[39m Build start
+[32m@relaxed/reactivity:dev: [0m[34mCJS[39m Build start
+[32m@relaxed/reactivity:dev: [0m[34mIIFE[39m Build start
+[32m@relaxed/reactivity:dev: [0mX [ERROR] Unexpected ")"
+[32m@relaxed/reactivity:dev: [0m
+[32m@relaxed/reactivity:dev: [0m    src/ref.ts:60:31:
+[32m@relaxed/reactivity:dev: [0m      60 │       if(isRef(target[key]) && )
+[32m@relaxed/reactivity:dev: [0m         ╵                                ^
+[32m@relaxed/reactivity:dev: [0m
+[32m@relaxed/reactivity:dev: [0mX [ERROR] Unexpected ")"
+[32m@relaxed/reactivity:dev: [0m
+[32m@relaxed/reactivity:dev: [0m    src/ref.ts:60:31:
+[32m@relaxed/reactivity:dev: [0m      60 │       if(isRef(target[key]) && )
+[32m@relaxed/reactivity:dev: [0m         ╵                                ^
+[32m@relaxed/reactivity:dev: [0m
+[32m@relaxed/reactivity:dev: [0m[31mIIFE[39m [31mBuild failed[39m
+[32m@relaxed/reactivity:dev: [0mX [ERROR] Unexpected ")"
+[32m@relaxed/reactivity:dev: [0m
+[32m@relaxed/reactivity:dev: [0m    src/ref.ts:60:31:
+[32m@relaxed/reactivity:dev: [0m      60 │       if(isRef(target[key]) && )
+[32m@relaxed/reactivity:dev: [0m         ╵                                ^
+[32m@relaxed/reactivity:dev: [0m
+[32m@relaxed/reactivity:dev: [0m[31mError: Build failed with 1 error:
+[32m@relaxed/reactivity:dev: [0msrc/ref.ts:60:31: ERROR: Unexpected ")"
+[32m@relaxed/reactivity:dev: [0m    at failureErrorWithLog (D:\code-adny\mini-vue\node_modules\.pnpm\esbuild@0.15.7\node_modules\esbuild\lib\main.js:1624:15)
+[32m@relaxed/reactivity:dev: [0m    at D:\code-adny\mini-vue\node_modules\.pnpm\esbuild@0.15.7\node_modules\esbuild\lib\main.js:1266:28
+[32m@relaxed/reactivity:dev: [0m    at runOnEndCallbacks (D:\code-adny\mini-vue\node_modules\.pnpm\esbuild@0.15.7\node_modules\esbuild\lib\main.js:1046:63)
+[32m@relaxed/reactivity:dev: [0m    at buildResponseToResult (D:\code-adny\mini-vue\node_modules\.pnpm\esbuild@0.15.7\node_modules\esbuild\lib\main.js:1264:7)
+[32m@relaxed/reactivity:dev: [0m    at D:\code-adny\mini-vue\node_modules\.pnpm\esbuild@0.15.7\node_modules\esbuild\lib\main.js:1377:14
+[32m@relaxed/reactivity:dev: [0m    at D:\code-adny\mini-vue\node_modules\.pnpm\esbuild@0.15.7\node_modules\esbuild\lib\main.js:678:9
+[32m@relaxed/reactivity:dev: [0m    at handleIncomingPacket (D:\code-adny\mini-vue\node_modules\.pnpm\esbuild@0.15.7\node_modules\esbuild\lib\main.js:775:9)
+[32m@relaxed/reactivity:dev: [0m    at Socket.readFromStdout (D:\code-adny\mini-vue\node_modules\.pnpm\esbuild@0.15.7\node_modules\esbuild\lib\main.js:644:7)
+[32m@relaxed/reactivity:dev: [0m    at Socket.emit (node:events:526:28)
+[32m@relaxed/reactivity:dev: [0m    at addChunk (node:internal/streams/readable:315:12)[39m
+[32m@relaxed/reactivity:dev: [0m[31mESM[39m [31mBuild failed[39m
+[32m@relaxed/reactivity:dev: [0m[31mCJS[39m [31mBuild failed[39m
+[32m@relaxed/reactivity:dev: [0m[34mCLI[39m Change detected: change src/ref.ts
+[32m@relaxed/reactivity:dev: [0m[34mCLI[39m Cleaning output folder
+[32m@relaxed/reactivity:dev: [0m[34mESM[39m Build start
+[32m@relaxed/reactivity:dev: [0m[34mCJS[39m Build start
+[32m@relaxed/reactivity:dev: [0m[34mIIFE[39m Build start
+[32m@relaxed/reactivity:dev: [0m[32mIIFE[39m [1mdist\index.global.js     [22m[32m4.47 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mIIFE[39m [1mdist\index.global.js.map [22m[32m22.13 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mIIFE[39m ⚡️ Build success in 10ms
+[32m@relaxed/reactivity:dev: [0m[32mCJS[39m [1mdist\index.js     [22m[32m5.24 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mCJS[39m [1mdist\index.js.map [22m[32m21.06 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mCJS[39m ⚡️ Build success in 18ms
+[32m@relaxed/reactivity:dev: [0m[32mESM[39m [1mdist\index.mjs     [22m[32m4.11 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mESM[39m [1mdist\index.mjs.map [22m[32m20.71 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mESM[39m ⚡️ Build success in 18ms
+[32m@relaxed/reactivity:dev: [0m[34mCLI[39m Change detected: change src/ref.ts
+[32m@relaxed/reactivity:dev: [0m[34mCLI[39m Cleaning output folder
+[32m@relaxed/reactivity:dev: [0m[34mESM[39m Build start
+[32m@relaxed/reactivity:dev: [0m[34mCJS[39m Build start
+[32m@relaxed/reactivity:dev: [0m[34mIIFE[39m Build start
+[32m@relaxed/reactivity:dev: [0m[32mIIFE[39m [1mdist\index.global.js     [22m[32m4.47 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mIIFE[39m [1mdist\index.global.js.map [22m[32m22.13 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mIIFE[39m ⚡️ Build success in 19ms
+[32m@relaxed/reactivity:dev: [0m[32mCJS[39m [1mdist\index.js     [22m[32m5.24 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mCJS[39m [1mdist\index.js.map [22m[32m21.07 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mCJS[39m ⚡️ Build success in 23ms
+[32m@relaxed/reactivity:dev: [0m[32mESM[39m [1mdist\index.mjs     [22m[32m4.11 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mESM[39m [1mdist\index.mjs.map [22m[32m20.72 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mESM[39m ⚡️ Build success in 28ms
+[32m@relaxed/reactivity:dev: [0m[34mCLI[39m Change detected: change src/ref.ts
+[32m@relaxed/reactivity:dev: [0m[34mCLI[39m Cleaning output folder
+[32m@relaxed/reactivity:dev: [0m[34mESM[39m Build start
+[32m@relaxed/reactivity:dev: [0m[34mCJS[39m Build start
+[32m@relaxed/reactivity:dev: [0m[34mIIFE[39m Build start
+[32m@relaxed/reactivity:dev: [0m[32mIIFE[39m [1mdist\index.global.js     [22m[32m4.47 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mIIFE[39m [1mdist\index.global.js.map [22m[32m22.16 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mIIFE[39m ⚡️ Build success in 14ms
+[32m@relaxed/reactivity:dev: [0m[32mESM[39m [1mdist\index.mjs     [22m[32m4.11 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mESM[39m [1mdist\index.mjs.map [22m[32m20.74 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mESM[39m ⚡️ Build success in 17ms
+[32m@relaxed/reactivity:dev: [0m[32mCJS[39m [1mdist\index.js     [22m[32m5.24 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mCJS[39m [1mdist\index.js.map [22m[32m21.09 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mCJS[39m ⚡️ Build success in 17ms
+[32m@relaxed/reactivity:dev: [0m[34mCLI[39m Change detected: change src/ref.ts
+[32m@relaxed/reactivity:dev: [0m[34mCLI[39m Cleaning output folder
+[32m@relaxed/reactivity:dev: [0m[34mESM[39m Build start
+[32m@relaxed/reactivity:dev: [0m[34mCJS[39m Build start
+[32m@relaxed/reactivity:dev: [0m[34mIIFE[39m Build start
+[32m@relaxed/reactivity:dev: [0m[32mIIFE[39m [1mdist\index.global.js     [22m[32m4.47 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mIIFE[39m [1mdist\index.global.js.map [22m[32m22.16 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mIIFE[39m ⚡️ Build success in 50ms
+[32m@relaxed/reactivity:dev: [0m[32mCJS[39m [1mdist\index.js     [22m[32m5.24 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mCJS[39m [1mdist\index.js.map [22m[32m21.09 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mCJS[39m ⚡️ Build success in 75ms
+[32m@relaxed/reactivity:dev: [0m[32mESM[39m [1mdist\index.mjs     [22m[32m4.11 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mESM[39m [1mdist\index.mjs.map [22m[32m20.74 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mESM[39m ⚡️ Build success in 78ms
+[32m@relaxed/reactivity:dev: [0m[34mCLI[39m Change detected: change src/ref.ts
+[32m@relaxed/reactivity:dev: [0m[34mCLI[39m Cleaning output folder
+[32m@relaxed/reactivity:dev: [0m[34mESM[39m Build start
+[32m@relaxed/reactivity:dev: [0m[34mCJS[39m Build start
+[32m@relaxed/reactivity:dev: [0m[34mIIFE[39m Build start
+[32m@relaxed/reactivity:dev: [0m[32mCJS[39m [1mdist\index.js     [22m[32m5.24 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mCJS[39m [1mdist\index.js.map [22m[32m21.12 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mCJS[39m ⚡️ Build success in 20ms
+[32m@relaxed/reactivity:dev: [0m[32mIIFE[39m [1mdist\index.global.js     [22m[32m4.47 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mIIFE[39m [1mdist\index.global.js.map [22m[32m22.19 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mIIFE[39m ⚡️ Build success in 21ms
+[32m@relaxed/reactivity:dev: [0m[32mESM[39m [1mdist\index.mjs     [22m[32m4.11 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mESM[39m [1mdist\index.mjs.map [22m[32m20.77 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mESM[39m ⚡️ Build success in 25ms
+[32m@relaxed/reactivity:dev: [0m[34mCLI[39m Change detected: change src/ref.ts
+[32m@relaxed/reactivity:dev: [0m[34mCLI[39m Cleaning output folder
+[32m@relaxed/reactivity:dev: [0m[34mESM[39m Build start
+[32m@relaxed/reactivity:dev: [0m[34mCJS[39m Build start
+[32m@relaxed/reactivity:dev: [0m[34mIIFE[39m Build start
+[32m@relaxed/reactivity:dev: [0mX [ERROR] Expected ";" but found "Reflect"
+[32m@relaxed/reactivity:dev: [0m
+[32m@relaxed/reactivity:dev: [0m    src/ref.ts:63:14:
+[32m@relaxed/reactivity:dev: [0m      63 │         rturn Reflect.set
+[32m@relaxed/reactivity:dev: [0m         │               ~~~~~~~
+[32m@relaxed/reactivity:dev: [0m         ╵               ;
+[32m@relaxed/reactivity:dev: [0m
+[32m@relaxed/reactivity:dev: [0mX [ERROR] Expected ";" but found "Reflect"
+[32m@relaxed/reactivity:dev: [0m
+[32m@relaxed/reactivity:dev: [0m    src/ref.ts:63:14:
+[32m@relaxed/reactivity:dev: [0m      63 │         rturn Reflect.set
+[32m@relaxed/reactivity:dev: [0m         │               ~~~~~~~
+[32m@relaxed/reactivity:dev: [0m         ╵               ;
+[32m@relaxed/reactivity:dev: [0m
+[32m@relaxed/reactivity:dev: [0mX [ERROR] Expected ";" but found "Reflect"
+[32m@relaxed/reactivity:dev: [0m
+[32m@relaxed/reactivity:dev: [0m    src/ref.ts:63:14:
+[32m@relaxed/reactivity:dev: [0m      63 │         rturn Reflect.set
+[32m@relaxed/reactivity:dev: [0m         │               ~~~~~~~
+[32m@relaxed/reactivity:dev: [0m         ╵               ;
+[32m@relaxed/reactivity:dev: [0m
+[32m@relaxed/reactivity:dev: [0m[31mIIFE[39m [31mBuild failed[39m
+[32m@relaxed/reactivity:dev: [0m[31mError: Build failed with 1 error:
+[32m@relaxed/reactivity:dev: [0msrc/ref.ts:63:14: ERROR: Expected ";" but found "Reflect"
+[32m@relaxed/reactivity:dev: [0m    at failureErrorWithLog (D:\code-adny\mini-vue\node_modules\.pnpm\esbuild@0.15.7\node_modules\esbuild\lib\main.js:1624:15)
+[32m@relaxed/reactivity:dev: [0m    at D:\code-adny\mini-vue\node_modules\.pnpm\esbuild@0.15.7\node_modules\esbuild\lib\main.js:1266:28
+[32m@relaxed/reactivity:dev: [0m    at runOnEndCallbacks (D:\code-adny\mini-vue\node_modules\.pnpm\esbuild@0.15.7\node_modules\esbuild\lib\main.js:1046:63)
+[32m@relaxed/reactivity:dev: [0m    at buildResponseToResult (D:\code-adny\mini-vue\node_modules\.pnpm\esbuild@0.15.7\node_modules\esbuild\lib\main.js:1264:7)
+[32m@relaxed/reactivity:dev: [0m    at D:\code-adny\mini-vue\node_modules\.pnpm\esbuild@0.15.7\node_modules\esbuild\lib\main.js:1377:14
+[32m@relaxed/reactivity:dev: [0m    at D:\code-adny\mini-vue\node_modules\.pnpm\esbuild@0.15.7\node_modules\esbuild\lib\main.js:678:9
+[32m@relaxed/reactivity:dev: [0m    at handleIncomingPacket (D:\code-adny\mini-vue\node_modules\.pnpm\esbuild@0.15.7\node_modules\esbuild\lib\main.js:775:9)
+[32m@relaxed/reactivity:dev: [0m    at Socket.readFromStdout (D:\code-adny\mini-vue\node_modules\.pnpm\esbuild@0.15.7\node_modules\esbuild\lib\main.js:644:7)
+[32m@relaxed/reactivity:dev: [0m    at Socket.emit (node:events:526:28)
+[32m@relaxed/reactivity:dev: [0m    at addChunk (node:internal/streams/readable:315:12)[39m
+[32m@relaxed/reactivity:dev: [0m[31mCJS[39m [31mBuild failed[39m
+[32m@relaxed/reactivity:dev: [0m[31mESM[39m [31mBuild failed[39m
+[32m@relaxed/reactivity:dev: [0m[34mCLI[39m Change detected: change src/ref.ts
+[32m@relaxed/reactivity:dev: [0m[34mCLI[39m Cleaning output folder
+[32m@relaxed/reactivity:dev: [0m[34mESM[39m Build start
+[32m@relaxed/reactivity:dev: [0m[34mCJS[39m Build start
+[32m@relaxed/reactivity:dev: [0m[34mIIFE[39m Build start
+[32m@relaxed/reactivity:dev: [0m[32mIIFE[39m [1mdist\index.global.js     [22m[32m4.47 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mIIFE[39m [1mdist\index.global.js.map [22m[32m22.20 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mIIFE[39m ⚡️ Build success in 23ms
+[32m@relaxed/reactivity:dev: [0m[32mCJS[39m [1mdist\index.js     [22m[32m5.24 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mCJS[39m [1mdist\index.js.map [22m[32m21.14 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mCJS[39m ⚡️ Build success in 37ms
+[32m@relaxed/reactivity:dev: [0m[32mESM[39m [1mdist\index.mjs     [22m[32m4.11 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mESM[39m [1mdist\index.mjs.map [22m[32m20.79 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mESM[39m ⚡️ Build success in 42ms
+[32m@relaxed/reactivity:dev: [0m[34mCLI[39m Change detected: change src/ref.ts
+[32m@relaxed/reactivity:dev: [0m[34mCLI[39m Cleaning output folder
+[32m@relaxed/reactivity:dev: [0m[34mESM[39m Build start
+[32m@relaxed/reactivity:dev: [0m[34mCJS[39m Build start
+[32m@relaxed/reactivity:dev: [0m[34mIIFE[39m Build start
+[32m@relaxed/reactivity:dev: [0m[32mIIFE[39m [1mdist\index.global.js     [22m[32m4.47 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mIIFE[39m [1mdist\index.global.js.map [22m[32m22.22 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mIIFE[39m ⚡️ Build success in 14ms
+[32m@relaxed/reactivity:dev: [0m[32mESM[39m [1mdist\index.mjs     [22m[32m4.11 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mESM[39m [1mdist\index.mjs.map [22m[32m20.80 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mESM[39m ⚡️ Build success in 18ms
+[32m@relaxed/reactivity:dev: [0m[32mCJS[39m [1mdist\index.js     [22m[32m5.24 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mCJS[39m [1mdist\index.js.map [22m[32m21.16 KB[39m
+[32m@relaxed/reactivity:dev: [0m[32mCJS[39m ⚡️ Build success in 18ms
+[32m@relaxed/reactivity:dev: [0m[34mCLI[39m Change detected: change src/ref.ts
+[32m@relaxed/reactivity:dev: [0m[34mCLI[39m Cleaning output folder
+[32m@relaxed/reactivity:dev: [0m
