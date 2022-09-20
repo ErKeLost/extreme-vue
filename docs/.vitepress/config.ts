@@ -202,10 +202,10 @@ export default defineConfig({
       ],
       "/config/": [
         {
-          text: "Config",
+          text: "runtime-core",
           items: [
             {
-              text: "Configuring Vite",
+              text: "实现初始化 component 主流程",
               link: "/config/",
             },
             {

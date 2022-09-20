@@ -20,10 +20,18 @@ var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: tru
 // src/index.ts
 var src_exports = {};
 __export(src_exports, {
+  computed: () => computed,
   effect: () => effect,
+  isProxy: () => isProxy,
+  isReactive: () => isReactive,
+  isReadonly: () => isReadonly,
+  isRef: () => isRef,
+  proxyRefs: () => proxyRefs,
   reactive: () => reactive,
   readonly: () => readonly,
-  ref: () => ref
+  ref: () => ref,
+  shallowReadonly: () => shallowReadonly,
+  unRef: () => unRef
 });
 module.exports = __toCommonJS(src_exports);
 
@@ -123,21 +131,21 @@ var get = createGetter();
 var set = createSetter();
 var readonlyGet = createGetter(true);
 var shallowReadonlyGet = createGetter(true, true);
-function createGetter(isReadonly = false, shallow = false) {
+function createGetter(isReadonly2 = false, shallow = false) {
   return function get2(target, key) {
     const res = Reflect.get(target, key);
     if (key === "_v_isReactive" /* IS_REACTIVE */) {
-      return !isReadonly;
+      return !isReadonly2;
     } else if (key === "_v_isReadonly" /* IS_READONLY */) {
-      return isReadonly;
+      return isReadonly2;
     }
     if (shallow) {
       return res;
     }
     if ((0, import_shared2.isObject)(res)) {
-      return isReadonly ? readonly(res) : reactive(res);
+      return isReadonly2 ? readonly(res) : reactive(res);
     }
-    if (!isReadonly) {
+    if (!isReadonly2) {
       track(target, key);
     }
     return res;
@@ -172,6 +180,18 @@ function reactive(raw) {
 function readonly(raw) {
   return createReactiveObject(raw, readonlyHandlers);
 }
+function shallowReadonly(raw) {
+  return createReactiveObject(raw, shadowReadonlyHandlers);
+}
+function isProxy(raw) {
+  return isReactive(raw) || isReadonly(raw);
+}
+function isReactive(raw) {
+  return !!raw["_v_isReactive" /* IS_REACTIVE */];
+}
+function isReadonly(raw) {
+  return !!raw["_v_isReadonly" /* IS_READONLY */];
+}
 function createReactiveObject(raw, Handlers) {
   return new Proxy(raw, Handlers);
 }
@@ -203,6 +223,26 @@ var RefImpl = class {
 function ref(value) {
   return new RefImpl(value);
 }
+function isRef(ref2) {
+  return !!ref2.__v_isRef;
+}
+function unRef(ref2) {
+  return isRef(ref2) ? ref2.value : ref2;
+}
+function proxyRefs(ref2) {
+  return new Proxy(ref2, {
+    get(target, key) {
+      return unRef(Reflect.get(target, key));
+    },
+    set(target, key, value) {
+      if (isRef(target[key]) && !isRef(value)) {
+        return target[key].value = value;
+      } else {
+        return Reflect.set(target, key, value);
+      }
+    }
+  });
+}
 function trackRefValue(ref2) {
   if (isTracking()) {
     trackEffect(ref2.dep);
@@ -211,11 +251,45 @@ function trackRefValue(ref2) {
 function convert(value) {
   return (0, import_shared3.isObject)(value) ? reactive(value) : value;
 }
+
+// src/computed.ts
+var ComputedRefImpl = class {
+  _getter;
+  _dirty = true;
+  _value;
+  _effect;
+  constructor(getter) {
+    this._getter = getter;
+    this._effect = new ReactiveEffect(getter, () => {
+      if (!this._dirty) {
+        this._dirty = true;
+      }
+    });
+  }
+  get value() {
+    if (this._dirty) {
+      this._dirty = false;
+      this._value = this._effect.run();
+    }
+    return this._value;
+  }
+};
+function computed(getter) {
+  return new ComputedRefImpl(getter);
+}
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
+  computed,
   effect,
+  isProxy,
+  isReactive,
+  isReadonly,
+  isRef,
+  proxyRefs,
   reactive,
   readonly,
-  ref
+  ref,
+  shallowReadonly,
+  unRef
 });
 //# sourceMappingURL=index.js.map

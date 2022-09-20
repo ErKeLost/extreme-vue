@@ -14,7 +14,7 @@ export function readonly(raw) {
   return createReactiveObject(raw, readonlyHandlers)
 }
 
-export function shadowReadonly(raw) {
+export function shallowReadonly(raw) {
   return createReactiveObject(raw, shadowReadonlyHandlers)
 }
 

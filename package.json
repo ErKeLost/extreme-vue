@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "Help you learn more efficiently vue3 source code",
   "scripts": {
-    "dev": "turbo run dev --filter=playground --filter=@relaxed/reactivity",
+    "dev": "turbo run dev --filter=playground --filter=@relaxed/runtime-core",
     "build": "turbo run dev --filter=@relaxed/reactivity",
     "docs": "vitepress dev docs",
     "test": "jest --no-cache",
