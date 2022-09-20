@@ -172,6 +172,10 @@ export default defineConfig({
               text: "实现 proxyRefs 功能",
               link: "/guide/a",
             },
+            {
+              text: "实现 computed 计算属性",
+              link: "/guide/b",
+            },
           ],
         },
         {
