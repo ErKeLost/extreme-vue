@@ -21,14 +21,15 @@ export function setupComponent(instance) {
 }
 
 function setupStatefulComponent(instance: any) {
-  // 自从组件的情况下 type 就代表一个组件
+  // 自从组件的情况下 type 就代表一个组件 type 就是 rootComponent
   const component = instance.type;
   // 拿到用户传入的setup
   const { setup } = component;
   if (setup) {
     // 如果用户传入了setup
     const setupResult = setup();
-
+    // setup 可能会返回一个函数 或者 一个对象 如果她返回一个函数 就说明她返回的是render 函数
+    // 如果返回的是一个对象 就注册到当前组件的上下文中 然后疯狂递归 patch
     // 解析 setupResult 可能返回的是一个函数 也可能返回的是一个对象 函数 就是 render函数 tsx 对象就是 setup 语法
     // 解析 setupResult方法
     handleSetupResult(instance, setupResult);
@@ -36,6 +37,7 @@ function setupStatefulComponent(instance: any) {
 }
 
 function handleSetupResult(instance, setupResult: any) {
+  // instance 是 组件解析出来的 vnode setupresutl 可能是 function 还可能是 返回
   // 他又两种可能 一种是 object 一种 是function
   // TODO function
 

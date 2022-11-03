@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "@relaxed/runtime-core",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build": "tsup --watch"
   },
   "keywords": [],
   "author": "",

@@ -1,3 +1,4 @@
+import { isObject } from "@relaxed/shared";
 import { createComponentInstance, setupComponent } from "./component";
 
 export function render(vnode, container) {
@@ -8,9 +9,28 @@ export function render(vnode, container) {
 function patch(vnode, container) {
   // 处理组件
   // 判断是不是element 类型
-  processComponent(vnode, container);
+  console.log(vnode);
+  if (typeof vnode.type === "string") {
+    processElement(vnode, container);
+  } else if (isObject(vnode.type)) {
+    processComponent(vnode, container);
+  }
+}
+function processElement(vnode: any, container: any) {
+  // 初始化 还有 更新
+  mountElement(vnode, container);
 }
 
+function mountElement(vnode: any, container: any) {
+  const el = document.createElement(vnode.type);
+  const { props, children } = vnode;
+  el.textContent = vnode.children;
+  for (const key in props) {
+    const value = props[key];
+    el.setAttribute(key, value)
+  }
+  container.append(el)
+}
 function processComponent(vnode: any, container: any) {
   mountComponent(vnode, container);
 }
@@ -29,6 +49,7 @@ function setupRenderEffect(instance: { vnode: any; type: any }, container) {
   // vnode - element -> mountElement
   patch(subTree, container);
 }
+
 // import { ShapeFlags } from "@relaxed/shared";
 // import { createComponentInstance } from "./component";
 // import { queueJob } from "./scheduler";
