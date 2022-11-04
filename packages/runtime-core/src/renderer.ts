@@ -1,6 +1,9 @@
-import { isObject } from "@relaxed/shared";
+// import { isObject } from "@relaxed/shared";
 import { createComponentInstance, setupComponent } from "./component";
-
+export const isObject = (val) => {
+  return val !== null && typeof val === "object";
+};
+// 这个render 是初始化处理 app 的render
 export function render(vnode, container) {
   // patch 方法  为了进行后续递归处理
   patch(vnode, container);
@@ -9,7 +12,6 @@ export function render(vnode, container) {
 function patch(vnode, container) {
   // 处理组件
   // 判断是不是element 类型
-  console.log(vnode);
   if (typeof vnode.type === "string") {
     processElement(vnode, container);
   } else if (isObject(vnode.type)) {
@@ -27,9 +29,9 @@ function mountElement(vnode: any, container: any) {
   el.textContent = vnode.children;
   for (const key in props) {
     const value = props[key];
-    el.setAttribute(key, value)
+    el.setAttribute(key, value);
   }
-  container.append(el)
+  container.append(el);
 }
 function processComponent(vnode: any, container: any) {
   mountComponent(vnode, container);
@@ -37,13 +39,18 @@ function processComponent(vnode: any, container: any) {
 
 function mountComponent(vnode: any, container: any) {
   const instance = createComponentInstance(vnode);
-  setupComponent(instance);
+  console.log(instance);
+  // TODO
+  setupComponent(instance); // 添加一系列的属性给 instance
   setupRenderEffect(instance, container);
 }
 
 function setupRenderEffect(instance: { vnode: any; type: any }, container) {
+  // 这个render 是 setup返回的render
   const subTree = instance.type.render();
-
+  console.log(subTree);
+  console.log(container);
+  
   // 基于返回的虚拟节点
   // vnode - patch
   // vnode - element -> mountElement

@@ -28,6 +28,8 @@ function setupStatefulComponent(instance: any) {
   if (setup) {
     // 如果用户传入了setup
     const setupResult = setup();
+    console.log(setupResult);
+    
     // setup 可能会返回一个函数 或者 一个对象 如果她返回一个函数 就说明她返回的是render 函数
     // 如果返回的是一个对象 就注册到当前组件的上下文中 然后疯狂递归 patch
     // 解析 setupResult 可能返回的是一个函数 也可能返回的是一个对象 函数 就是 render函数 tsx 对象就是 setup 语法

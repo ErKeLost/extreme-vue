@@ -2,7 +2,7 @@ import { h } from '../packages/runtime-core/dist/index.mjs'
 
 const app = {
   render() {
-    h("div",{
+    return h("div",{
       id: 'root',
       class: ['red', 'blue']
     }, `hi mini-vue3 ${this.msg}`);

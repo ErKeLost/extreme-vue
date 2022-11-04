@@ -30,7 +30,6 @@ import { createVNode } from "./vnode";
 // //         render(vnode, rootContainer);
 // //       },
 // //     };
-
 // //     return app;
 // //   };
 // // }
@@ -43,7 +42,8 @@ export function createApp(rootComponent) {
       // 所有的逻辑操作都会转换成虚拟节点
       // 都是基于 虚拟节点做处理
       const vnode = createVNode(rootComponent);
-      // 然后调用 render 函数 渲染到 rootcontainer 上
+      console.log(vnode, rootContainer);
+      // 然后调用 render 函数 渲染到 rootContainer 上
       render(vnode, rootContainer);
     },
   };
