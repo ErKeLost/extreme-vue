@@ -6,7 +6,7 @@ const ogTitle = "Vite";
 const ogUrl = "https://main.vitejs.dev";
 
 export default defineConfig({
-  title: "Vite",
+  title: "Vue Source Code",
   description: "Next Generation Frontend Tooling",
   ignoreDeadLinks: true,
   head: [
