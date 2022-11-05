@@ -68,40 +68,24 @@ export default defineConfig({
     },
 
     nav: [
-      { text: "Guide", link: "/guide/", activeMatch: "/guide/" },
-      { text: "Config", link: "/config/", activeMatch: "/config/" },
-      { text: "Plugins", link: "/plugins/", activeMatch: "/plugins/" },
+      { text: "reactivity", link: "/reactivity/", activeMatch: "/reactivity/" },
       {
-        text: "Links",
-        items: [
-          {
-            text: "Twitter",
-            link: "https://twitter.com/vite_js",
-          },
-          {
-            text: "Discord Chat",
-            link: "https://chat.vitejs.dev",
-          },
-          {
-            text: "Awesome Vite",
-            link: "https://github.com/vitejs/awesome-vite",
-          },
-          {
-            text: "DEV Community",
-            link: "https://dev.to/t/vite",
-          },
-          {
-            text: "Rollup Plugins Compat",
-            link: "https://vite-rollup-plugins.patak.dev/",
-          },
-          {
-            text: "Changelog",
-            link: "https://github.com/vitejs/vite/blob/main/packages/vite/CHANGELOG.md",
-          },
-        ],
+        text: "runtime-core",
+        link: "/runtime-core/",
+        activeMatch: "/runtime-core/",
       },
       {
-        text: "v3 (next)",
+        text: "runtime-dom",
+        link: "/runtime-dom/",
+        activeMatch: "/runtime-dom/",
+      },
+      {
+        text: "compiler-core",
+        link: "/compiler-core/",
+        activeMatch: "/compiler-core/",
+      },
+      {
+        text: "shared",
         items: [
           {
             text: "v2.x (stable)",
@@ -112,9 +96,9 @@ export default defineConfig({
     ],
 
     sidebar: {
-      "/guide/": [
+      "/reactivity/": [
         {
-          text: "Guide",
+          text: "reactivity",
           items: [
             {
               text: "实现 effect & reactive",
@@ -200,7 +184,7 @@ export default defineConfig({
           ],
         },
       ],
-      "/config/": [
+      "/runtime-core/": [
         {
           text: "runtime-core",
           items: [
