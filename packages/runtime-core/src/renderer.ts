@@ -1,4 +1,5 @@
 // import { isObject } from "@relaxed/shared";
+import { patchProp } from "packages/runtime-test/src/patchProp";
 import { createComponentInstance, setupComponent } from "./component";
 export const isObject = (val) => {
   return val !== null && typeof val === "object";
@@ -10,6 +11,7 @@ export function render(vnode, container) {
 }
 
 function patch(vnode, container) {
+  debugger
   // 处理组件
   // 判断是不是element 类型
   if (typeof vnode.type === "string") {
@@ -26,12 +28,22 @@ function processElement(vnode: any, container: any) {
 function mountElement(vnode: any, container: any) {
   const el = document.createElement(vnode.type);
   const { props, children } = vnode;
-  el.textContent = vnode.children;
+  if (typeof children === "string") {
+    el.textContent = vnode.children;
+  } else if (Array.isArray(children)) {
+    mountChildren(children, el)
+  }
   for (const key in props) {
     const value = props[key];
     el.setAttribute(key, value);
   }
   container.append(el);
+}
+// 判断children是不是数组类型
+function mountChildren(children, container) {
+  children.forEach((child) => {
+    patch(child, container);
+  });
 }
 function processComponent(vnode: any, container: any) {
   mountComponent(vnode, container);
@@ -50,7 +62,7 @@ function setupRenderEffect(instance: { vnode: any; type: any }, container) {
   const subTree = instance.type.render();
   console.log(subTree);
   console.log(container);
-  
+
   // 基于返回的虚拟节点
   // vnode - patch
   // vnode - element -> mountElement
