@@ -102,63 +102,63 @@ export default defineConfig({
           items: [
             {
               text: "实现 effect & reactive",
-              link: "/guide/why",
+              link: "/reactivity/why",
             },
             {
               text: "effect 返回 runner",
-              link: "/guide/",
+              link: "/reactivity/",
             },
             {
               text: "effect 的 scheduler",
-              link: "/guide/features",
+              link: "/reactivity/features",
             },
             {
               text: "effect 的 stop 功能",
-              link: "/guide/using-plugins",
+              link: "/reactivity/using-plugins",
             },
             {
               text: "优化 Effect 代码 onStop 功能",
-              link: "/guide/dep-pre-bundling",
+              link: "/reactivity/dep-pre-bundling",
             },
             {
               text: "readonly 优化代码",
-              link: "/guide/assets",
+              link: "/reactivity/assets",
             },
             {
               text: "实现 isReactive 和 isReadonly",
-              link: "/guide/build",
+              link: "/reactivity/build",
             },
             {
               text: "stop 优化",
-              link: "/guide/static-deploy",
+              link: "/reactivity/static-deploy",
             },
             {
               text: "reactive 和 readonly 嵌套对象转换功能",
-              link: "/guide/env-and-mode",
+              link: "/reactivity/env-and-mode",
             },
             {
               text: "实现shadowReadonly",
-              link: "/guide/ssr",
+              link: "/reactivity/ssr",
             },
             {
               text: "Is Proxy",
-              link: "/guide/backend-integration",
+              link: "/reactivity/backend-integration",
             },
             {
               text: "Ref",
-              link: "/guide/comparisons",
+              link: "/reactivity/comparisons",
             },
             {
               text: "实现 isRef 和 unRef 功能",
-              link: "/guide/migration",
+              link: "/reactivity/migration",
             },
             {
               text: "实现 proxyRefs 功能",
-              link: "/guide/a",
+              link: "/reactivity/a",
             },
             {
               text: "实现 computed 计算属性",
-              link: "/guide/b",
+              link: "/reactivity/b",
             },
           ],
         },
@@ -193,12 +193,12 @@ export default defineConfig({
               link: "/runtime-core/",
             },
             {
-              text: "Shared Options",
-              link: "/config/shared-options",
+              text: "实现初始化 element 主流程",
+              link: "/runtime-core/element",
             },
             {
-              text: "Server Options",
-              link: "/config/server-options",
+              text: "实现组件代理对象",
+              link: "/runtime-core/proxy-object",
             },
             {
               text: "Build Options",

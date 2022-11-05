@@ -1,5 +1,6 @@
-import { hasOwn } from "@relaxed/shared";
-
+// import { hasOwn } from "@relaxed/shared";
+// import { hasOwn } from "@relaxed/shared";
+import { hasOwn } from "../../shared";
 const publicPropertiesMap = {
   // 当用户调用 instance.proxy.$emit 时就会触发这个函数
   // i 就是 instance 的缩写 也就是组件实例对象

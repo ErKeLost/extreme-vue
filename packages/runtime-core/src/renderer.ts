@@ -11,7 +11,7 @@ export function render(vnode, container) {
 }
 
 function patch(vnode, container) {
-  debugger
+  // debugger
   // 处理组件
   // 判断是不是element 类型
   if (typeof vnode.type === "string") {
@@ -26,12 +26,13 @@ function processElement(vnode: any, container: any) {
 }
 
 function mountElement(vnode: any, container: any) {
-  const el = document.createElement(vnode.type);
+  // 为了我们封装一个 $el 我们在vnode里面存一个 el 作为根dom节点
+  const el = (vnode.el = document.createElement(vnode.type));
   const { props, children } = vnode;
   if (typeof children === "string") {
     el.textContent = vnode.children;
   } else if (Array.isArray(children)) {
-    mountChildren(children, el)
+    mountChildren(children, el);
   }
   for (const key in props) {
     const value = props[key];
@@ -54,19 +55,25 @@ function mountComponent(vnode: any, container: any) {
   console.log(instance);
   // TODO
   setupComponent(instance); // 添加一系列的属性给 instance
-  setupRenderEffect(instance, container);
+  setupRenderEffect(instance, vnode, container);
 }
 
-function setupRenderEffect(instance: { vnode: any; type: any }, container) {
+function setupRenderEffect(
+  instance: { vnode: any; type: any },
+  vnode,
+  container
+) {
   // 这个render 是 setup返回的render
-  const subTree = instance.type.render();
-  console.log(subTree);
-  console.log(container);
-
+  // 获取代理对象 绑定到 render里面
+  console.log(instance);
+  // 代理的是setupstate 的this setupstate 就是 setup返回的对象 我们通过this 就能获取到了
+  const { proxy } = instance;
+  const subTree = instance.type.render.call(proxy);
   // 基于返回的虚拟节点
   // vnode - patch
   // vnode - element -> mountElement
   patch(subTree, container);
+  vnode.el = subTree.el;
 }
 
 // import { ShapeFlags } from "@relaxed/shared";
