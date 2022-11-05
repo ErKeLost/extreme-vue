@@ -190,7 +190,7 @@ export default defineConfig({
           items: [
             {
               text: "实现初始化 component 主流程",
-              link: "/config/",
+              link: "/runtime-core/",
             },
             {
               text: "Shared Options",
