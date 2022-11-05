@@ -8,7 +8,7 @@ const ogUrl = "https://main.vitejs.dev";
 export default defineConfig({
   title: "Vite",
   description: "Next Generation Frontend Tooling",
-
+  ignoreDeadLinks: true,
   head: [
     ["link", { rel: "icon", type: "image/svg+xml", href: "/logo.svg" }],
     ["meta", { property: "og:type", content: "website" }],
