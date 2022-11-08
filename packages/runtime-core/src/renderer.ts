@@ -1,3 +1,5 @@
+import { ShapeFlags } from './shapeFlag';
+// import { ShapeFlags } from '@relaxed/shared';
 // import { isObject } from "@relaxed/shared";
 import { patchProp } from "packages/runtime-test/src/patchProp";
 import { createComponentInstance, setupComponent } from "./component";
@@ -14,9 +16,11 @@ function patch(vnode, container) {
   // debugger
   // 处理组件
   // 判断是不是element 类型
-  if (typeof vnode.type === "string") {
+  // shapeFlag
+  const { ShapeFlag } = vnode
+  if (ShapeFlag & ShapeFlags.ELEMENT) {
     processElement(vnode, container);
-  } else if (isObject(vnode.type)) {
+  } else if (ShapeFlag & ShapeFlags.STATEFUL_COMPONENT) {
     processComponent(vnode, container);
   }
 }
@@ -28,10 +32,10 @@ function processElement(vnode: any, container: any) {
 function mountElement(vnode: any, container: any) {
   // 为了我们封装一个 $el 我们在vnode里面存一个 el 作为根dom节点
   const el = (vnode.el = document.createElement(vnode.type));
-  const { props, children } = vnode;
-  if (typeof children === "string") {
+  const { props, children, ShapeFlag } = vnode;
+  if (ShapeFlag & ShapeFlags.TEXT_CHILDREN) {
     el.textContent = vnode.children;
-  } else if (Array.isArray(children)) {
+  } else if (ShapeFlag & ShapeFlags.ARRAY_CHILDREN) {
     mountChildren(children, el);
   }
   for (const key in props) {
