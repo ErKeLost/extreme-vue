@@ -20,7 +20,9 @@ const app = {
         h("div", { class: "" }, `hi mini-vue3 ${this.msg}`),
         h("div", { class: "red" }, "我是第一个子节点"),
         h("div", { class: "bbb" }, "我是第二个子节点"),
-        // h(foo),
+        h(foo, {
+          count: 123
+        }),
       ]
     );
   },
