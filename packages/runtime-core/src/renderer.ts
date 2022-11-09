@@ -1,4 +1,4 @@
-import { ShapeFlags } from './shapeFlag';
+import { ShapeFlags } from "./shapeFlag";
 // import { ShapeFlags } from '@relaxed/shared';
 // import { isObject } from "@relaxed/shared";
 import { patchProp } from "packages/runtime-test/src/patchProp";
@@ -17,7 +17,7 @@ function patch(vnode, container) {
   // 处理组件
   // 判断是不是element 类型
   // shapeFlag
-  const { ShapeFlag } = vnode
+  const { ShapeFlag } = vnode;
   if (ShapeFlag & ShapeFlags.ELEMENT) {
     processElement(vnode, container);
   } else if (ShapeFlag & ShapeFlags.STATEFUL_COMPONENT) {
@@ -40,7 +40,13 @@ function mountElement(vnode: any, container: any) {
   }
   for (const key in props) {
     const value = props[key];
-    el.setAttribute(key, value);
+    const isOn = (key: string) => /^on[A-Z]/.test(key);
+    if (isOn(key)) {
+      const event = key.slice(2).toLowerCase();
+      el.addEventListener(event, value);
+    } else {
+      el.setAttribute(key, value);
+    }
   }
   container.append(el);
 }
