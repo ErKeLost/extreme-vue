@@ -1,20 +1,24 @@
 import { initProps } from "./componentProps";
 import { PublicInstanceProxyHandlers } from "./componentPublicInstance";
 import { initSlots } from "./componentSlots";
-
+import { proxyRefs, shallowReadonly } from "../../reactivity/src/index";
+import { emit } from "./componentEmits";
 export function createComponentInstance(vnode: any) {
   const component = {
     vnode,
     type: vnode.type,
     setupState: {},
+    props: {},
+    emit: () => {},
   };
+  component.emit = emit.bind(null, component) as any;
   return component;
 }
 
 export function setupComponent(instance) {
   // TODO
   // props
-  // initProps()
+  initProps(instance, instance.vnode.props);
   // slots
   // initSlots()
 
@@ -31,7 +35,9 @@ function setupStatefulComponent(instance: any) {
   const { setup } = component;
   if (setup) {
     // 如果用户传入了setup
-    const setupResult = setup();
+    const setupResult = setup(shallowReadonly(instance.props), {
+      emit: instance.emit,
+    });
     console.log(setupResult);
 
     // setup 可能会返回一个函数 或者 一个对象 如果她返回一个函数 就说明她返回的是render 函数

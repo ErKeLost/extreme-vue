@@ -1,6 +1,6 @@
 // import { trackEffects, triggerEffects, isTracking } from "./effect";
 // import { createDep } from "./dep";
-import { isObject, hasChanged } from "@relaxed/shared";
+import { isObject, hasChanged } from "../../shared/src/index";
 import { reactive } from "./reactive";
 import { trackEffect, triggerEffect, isTracking } from "./effect";
 

@@ -35,11 +35,16 @@ __export(src_exports, {
 });
 module.exports = __toCommonJS(src_exports);
 
-// src/baseHandlers.ts
-var import_shared2 = require("@relaxed/shared");
+// ../shared/src/index.ts
+var isObject = (val) => {
+  return val !== null && typeof val === "object";
+};
+var extend = Object.assign;
+function hasChanged(value, oldValue) {
+  return !Object.is(value, oldValue);
+}
 
 // src/effect.ts
-var import_shared = require("@relaxed/shared");
 var activeEffect;
 var shouldTrack;
 var ReactiveEffect = class {
@@ -115,7 +120,7 @@ function trigger(target, key) {
 }
 function effect(fn, options = {}) {
   const _effect = new ReactiveEffect(fn, options.scheduler);
-  (0, import_shared.extend)(_effect, options);
+  extend(_effect, options);
   console.log(_effect);
   _effect.run();
   const runner = _effect.run.bind(_effect);
@@ -142,7 +147,7 @@ function createGetter(isReadonly2 = false, shallow = false) {
     if (shallow) {
       return res;
     }
-    if ((0, import_shared2.isObject)(res)) {
+    if (isObject(res)) {
       return isReadonly2 ? readonly(res) : reactive(res);
     }
     if (!isReadonly2) {
@@ -169,7 +174,7 @@ var readonlyHandlers = {
     return true;
   }
 };
-var shadowReadonlyHandlers = (0, import_shared2.extend)({}, readonlyHandlers, {
+var shadowReadonlyHandlers = extend({}, readonlyHandlers, {
   get: shallowReadonlyGet
 });
 
@@ -197,7 +202,6 @@ function createReactiveObject(raw, Handlers) {
 }
 
 // src/ref.ts
-var import_shared3 = require("@relaxed/shared");
 var RefImpl = class {
   _value;
   _rawValue;
@@ -213,7 +217,7 @@ var RefImpl = class {
     return this._value;
   }
   set value(newValue) {
-    if ((0, import_shared3.hasChanged)(newValue, this._rawValue)) {
+    if (hasChanged(newValue, this._rawValue)) {
       this._rawValue = newValue;
       this._value = convert(newValue);
       triggerEffect(this.dep);
@@ -249,7 +253,7 @@ function trackRefValue(ref2) {
   }
 }
 function convert(value) {
-  return (0, import_shared3.isObject)(value) ? reactive(value) : value;
+  return isObject(value) ? reactive(value) : value;
 }
 
 // src/computed.ts

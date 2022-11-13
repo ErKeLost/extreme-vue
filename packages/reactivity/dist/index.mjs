@@ -1,8 +1,13 @@
-// src/baseHandlers.ts
-import { extend as extend2, isObject } from "@relaxed/shared";
+// ../shared/src/index.ts
+var isObject = (val) => {
+  return val !== null && typeof val === "object";
+};
+var extend = Object.assign;
+function hasChanged(value, oldValue) {
+  return !Object.is(value, oldValue);
+}
 
 // src/effect.ts
-import { extend } from "@relaxed/shared";
 var activeEffect;
 var shouldTrack;
 var ReactiveEffect = class {
@@ -132,7 +137,7 @@ var readonlyHandlers = {
     return true;
   }
 };
-var shadowReadonlyHandlers = extend2({}, readonlyHandlers, {
+var shadowReadonlyHandlers = extend({}, readonlyHandlers, {
   get: shallowReadonlyGet
 });
 
@@ -160,7 +165,6 @@ function createReactiveObject(raw, Handlers) {
 }
 
 // src/ref.ts
-import { isObject as isObject2, hasChanged } from "@relaxed/shared";
 var RefImpl = class {
   _value;
   _rawValue;
@@ -212,7 +216,7 @@ function trackRefValue(ref2) {
   }
 }
 function convert(value) {
-  return isObject2(value) ? reactive(value) : value;
+  return isObject(value) ? reactive(value) : value;
 }
 
 // src/computed.ts

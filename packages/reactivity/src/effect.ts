@@ -1,4 +1,4 @@
-import { extend } from '@relaxed/shared'
+import { extend } from '../../shared/src/index'
 
 let activeEffect
 let shouldTrack
