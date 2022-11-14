@@ -9,6 +9,7 @@ export function createComponentInstance(vnode: any) {
     type: vnode.type,
     setupState: {},
     props: {},
+    slots: {},
     emit: () => {},
   };
   component.emit = emit.bind(null, component) as any;
@@ -20,7 +21,7 @@ export function setupComponent(instance) {
   // props
   initProps(instance, instance.vnode.props);
   // slots
-  // initSlots()
+  initSlots(instance, instance.vnode.children)
 
   // 有状态的组件实例
   setupStatefulComponent(instance);
